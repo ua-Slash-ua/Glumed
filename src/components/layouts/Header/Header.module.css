@@ -1,0 +1,34 @@
+.header {
+    padding: 1.09vw 5.21vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.l_side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.72vw;
+}
+
+.l_side nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.l_side nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.72vw;
+}
+.r_side span{
+    color: var(--color-primary);
+    font-family: Manrope , sans-serif;
+    font-size: 1.96031vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 111%; /* 2.17594rem */
+    letter-spacing: -0.03922vw;
+}

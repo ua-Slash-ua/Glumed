@@ -1,0 +1,29 @@
+:root {
+
+
+    --background--primary-gradient: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    --background--cart-first: #495A83;
+
+    --color-primary: #1B2238;
+    --color-without: #ED4649;
+
+    --font-size--66: 3.438vw;
+    --font-size--58: 3.021vw;
+    --font-size--52: 2.708vw;
+    --font-size--37: 1.927vw;
+    --font-size--36: 1.875vw;
+    --font-size--22: 1.146vw;
+    --font-size--20: 1.042vw;
+    --font-size--18: 0.938vw;
+}
+
+body {
+    width: 100vw;
+    background: #F5F6F7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+    }
+}
