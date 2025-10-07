@@ -1,0 +1,78 @@
+.hero_section{
+    padding: 0 2.55vw;
+    width: 100%;
+    height: fit-content;
+    min-height: 41.66667vw;
+    position: relative;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8.75vw 6.04vw 8.7vw 6.04vw;
+}
+.content{
+    display: flex;
+    width: 43.85417vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.29vw;
+}
+.content h1{
+    color: var(--color-primary);
+    font-family: Manrope, sans-serif;
+    font-size: 3.4375vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111%; /* 3.81563rem */
+    letter-spacing: -0.06875vw;
+}
+.content p{
+    width: 23.22917vw;
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.hero_bg{
+    border-radius: 2.29167vw;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+.hero_icon{
+    width: 46.40625vw;
+    height: 46.40625vw;
+    position: absolute;
+    top: 3.9vw;
+    right: 5.8vw;
+}
+.hero_icon_garant{
+    width: 12.7vw;
+    height: 13.8vw;
+    flex-shrink: 0;
+    position: absolute;
+    top: 11.8vw;
+    right: 14.3vw;
+}
+.btn_order{
+    width: 22.39583vw;
+    height: 4.32292vw;
+    flex-shrink: 0;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    gap: 1.15vw;
+    width: 94.95vw;
+    justify-content: center;
+    position: absolute;
+    bottom: -5.5vw;
+    /*display: none;*/
+}

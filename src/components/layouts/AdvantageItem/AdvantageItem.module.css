@@ -1,0 +1,90 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 45vw;
+    height: 34vw;
+    border-radius: 1.2vw;
+    overflow: hidden;
+    padding: 2.76vw 1.93vw;
+    align-items: flex-end;
+}
+
+.title {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+
+    padding: 0.52083vw 0.9375vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.52083vw;
+
+    border-radius: 1.14583vw;
+    background: #FFF;
+
+}
+
+.title span {
+
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 1.875vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111%; /* 2.08125rem */
+    letter-spacing: -0.0375vw;
+
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon {
+    min-width: 1.35417vw;
+    min-height: 1.35417vw;
+
+    width: 1.35417vw;
+    height: 1.35417vw;
+}
+
+.background_image {
+    position: absolute;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.background_image{
+    height: 100%;
+}
+
+.foreground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(15, 59, 152, 0.00) 0.36%, rgba(15, 59, 152, 0.80) 99.56%);
+}
+
+.item_left {
+    align-items: flex-start;
+}
+
+.item_left .foreground {
+    background: linear-gradient(270deg, rgba(97, 8, 8, 0.00) 0.36%, rgba(97, 8, 8, 0.80) 99.56%);
+
+}
+
+.item_left .title span {
+    color: #ED4649; /* новий колір тексту */
+    background: none; /* прибирає градієнт */
+    -webkit-background-clip: initial; /* скидає clip */
+    -webkit-text-fill-color: initial; /* повертає колір тексту */
+    background-clip: initial; /* стандартне значення */
+}

@@ -2,6 +2,7 @@
     width: 11.19792vw;
     height: 2.91667vw;
     flex-shrink: 0;
+    /*padding: 0.78vw 2.23vw;*/
 
     border-radius: 3.42865rem;
     background: var(--background--primary-gradient);

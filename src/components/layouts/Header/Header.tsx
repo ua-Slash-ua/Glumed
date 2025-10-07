@@ -16,9 +16,7 @@ export default function Header() {
                             {
                                 MenuConfig.map((item, index) => {
                                     return (
-                                        <>
-                                            <MenuItem key={index} name={item.name} path={item.path}/>
-                                        </>
+                                        <MenuItem key={index} name={item.name} path={item.path}/>
                                     )
                                 })
                             }
