@@ -1,0 +1,1 @@
+export type AdvantageLineItemProps = { name: string, status?: boolean }

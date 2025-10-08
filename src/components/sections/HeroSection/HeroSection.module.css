@@ -62,7 +62,8 @@
     right: 14.3vw;
 }
 .btn_order{
-    width: 22.39583vw;
+    width: fit-content;
+    padding: 1.45vw 2.45vw;
     height: 4.32292vw;
     flex-shrink: 0;
 }

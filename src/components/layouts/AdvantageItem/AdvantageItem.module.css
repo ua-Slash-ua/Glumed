@@ -3,11 +3,11 @@
     flex-direction: column;
     position: relative;
     width: 45vw;
-    height: 34vw;
     border-radius: 1.2vw;
     overflow: hidden;
     padding: 2.76vw 1.93vw;
     align-items: flex-end;
+    gap: 2.29vw;
 }
 
 .title {
@@ -26,7 +26,15 @@
     background: #FFF;
 
 }
+.item ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
+    gap: 1.15vw;
+    position: relative;
+    z-index: 3;
+}
 .title span {
 
     text-align: center;

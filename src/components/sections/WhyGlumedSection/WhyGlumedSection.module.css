@@ -1,0 +1,65 @@
+.why_glumed_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 9.17vw 6vw;
+
+}
+.title{
+    color: var(--color-primary);
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 2.70833vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111%; /* 3.00625rem */
+    letter-spacing: -0.05417vw;
+}
+.btn_order{
+    height: 4.32292vw;
+    border-radius: 3.42865vw;
+    padding: 1.45vw 1.67vw 1.57vw 1.67vw;
+
+}
+.container{
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.column{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4.17vw;
+
+}
+
+.background_image{
+    position: absolute;
+    z-index: 0;
+    /*width: 202.77563vw;*/
+    /*height: 115.31359vw;*/
+    right: 3vw;
+    left: -8vw;
+    top: -59vw;
+    transform: rotate(10.128deg);
+
+}
+
+.main_icon{
+    width: 43.54167vw;
+    height: 43.54167vw;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}

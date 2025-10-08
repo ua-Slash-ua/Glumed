@@ -14,6 +14,17 @@ import menWithOutGlumed from "@/public/men-without-glumed.png";
 import dagger from "@/public/icons/dagger.png";
 import checkMark from "@/public/icons/check-mark.png";
 
+import circle_01 from "@/public/icons/circle_01.svg";
+import spot from "@/public/icons/spot.png";
+
+import calendar from "@/public/icons/calendar.png";
+import react from "@/public/icons/react.png";
+import okHand from "@/public/icons/ok_hand.png";
+
+import whyGlumedGrille from "@/public/why-glumed-grille.png";
+
+import tablets from "@/public/tablets.png";
+
 
 export const IconsData: iconType = {
     hero_bg: {
@@ -56,4 +67,33 @@ export const IconsData: iconType = {
         src: checkMark,
         alt: 'Check mark'
     },
+    circle_01: {
+        src: circle_01,
+        alt: 'Circle'
+    },
+    spot: {
+        src: spot,
+        alt: 'Spot'
+    },
+    calendar: {
+        src: calendar,
+        alt: 'Calendar'
+    },
+    react: {
+        src: react,
+        alt: 'React'
+    },
+    ok_hand: {
+        src: okHand,
+        alt: 'Ok Hand (Nice)'
+    },
+    why_glumed_grille: {
+        src: whyGlumedGrille,
+        alt: 'Grille background'
+    },
+    tablets:{
+        src:tablets,
+        alt:'Tablets'
+    }
+
 }
