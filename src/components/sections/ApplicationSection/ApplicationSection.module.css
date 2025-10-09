@@ -1,0 +1,123 @@
+.application_section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8.65vw;
+    margin-bottom: 9.11vw;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5.94vw 8.33vw 5.57vw 5.21vw;
+    background: #F4F8FC;
+
+    width: 36.35417vw;
+    height: 39.89583vw;
+
+    position: relative;
+}
+
+.aside h3 {
+    color: var(--color-primary);
+    font-family: Manrope, sans-serif;
+    font-size: 2.70833vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 111%; /* 3.00625rem */
+    letter-spacing: -0.05417vw;
+}
+
+.aside span {
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 1.35417vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1.93vw;
+    margin-top: 1.77vw;
+}
+
+.aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.72vw;
+}
+
+.aside ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 0.74vw;
+    align-items: flex-start;
+}
+
+.garant {
+    position: absolute;
+    right: -6.5vw;
+
+    width: 13.07833vw;
+    height: 13.85979vw;
+    flex-shrink: 0;
+}
+
+.number {
+    width: 1.5625vw;
+    height: 1.5625vw;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5625vw;
+
+    background: #4189F4;
+
+    color: #FFF;
+
+    font-family: Manrope, sans-serif;
+    font-size: 0.83333vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133%; /* 1.10833rem */
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.36vw;
+}
+.content p {
+    width: 16vw;
+
+    color: var(--color-primary);
+    font-family: Manrope, sans-serif;
+    font-size: 0.83333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.25rem */
+}
+
+.content span {
+    color: var(--color-primary);
+    font-family: Manrope, sans-serif;
+    font-size: 1.19792vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133%; /* 1.59323rem */
+    margin: 0;
+}
+.form{
+    width: 100%;
+    height: 39.89583vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

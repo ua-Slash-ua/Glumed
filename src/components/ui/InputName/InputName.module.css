@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.63vw;
+}
+
+.container input{
+    width: 23.332vw;
+    height: 3.64583vw;
+    flex-shrink: 0;
+
+    border-radius: 3.4375vw;
+    background: #FFF;
+    padding-left:  1.72vw;
+}
+
+
+.container input::placeholder{
+    color: #ADADAD;
+    font-family: NeverMind, sans-serif;
+    font-size: 0.83333vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 0.83333rem */
+    letter-spacing: 0.01667vw;
+}
+
+.container span{
+    color: salmon;
+    font-family: NeverMind, sans-serif;
+    font-size: 0.83333vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 0.83333rem */
+    letter-spacing: 0.01667vw;
+}

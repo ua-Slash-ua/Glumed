@@ -1,0 +1,55 @@
+.form{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2.29167vw;
+    background: #F5F6F7;
+
+    width: 38.75vw;
+    min-height: 30.52083vw;
+    flex-shrink: 0;
+    padding: 2.97vw 6.87vw 4.01vw 6.82vw;
+    gap: 1.72vw;
+}
+.form h3{
+    width: 16.35417vw;
+
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 1.04167vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.btn_send{
+    width: 25.05208vw;
+    height: 4.32292vw;
+    flex-shrink: 0;
+
+    border-radius: 3.42865vw;
+    background:  linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    box-shadow: 0 1.548vw 4.646vw 0 rgba(121, 175, 255, 0.66);
+    border: transparent;
+}
+.div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form p{
+
+    color: rgba(0, 0, 0, 0.66);
+    text-align: center;
+    font-family: Manrope, serif;
+    font-size: 0.72917vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 13vw;
+
+}
