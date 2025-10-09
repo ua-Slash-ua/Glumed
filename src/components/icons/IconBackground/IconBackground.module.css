@@ -1,0 +1,9 @@
+.background{
+    position: absolute;
+    z-index: 1;
+    top: 135vw;
+    left: 0;
+}
+/*.background path{*/
+/*    fill: var(--color-primary);*/
+/*}*/

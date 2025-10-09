@@ -1,4 +1,4 @@
-import {iconType} from "@/types/icon.type";
+import {iconType, ReviewIcons} from "@/types/icon.type";
 
 import HeroBg from "@/public/hero-bg.png";
 import Garant from "@/public/garant.png";
@@ -25,6 +25,12 @@ import whyGlumedGrille from "@/public/why-glumed-grille.png";
 
 import tablets from "@/public/tablets.png";
 
+import Oksana from "@/public/reviews/Oksana.png";
+import Margo from "@/public/reviews/Margo.png";
+import Olena from "@/public/reviews/Olena.png";
+import Matviu from "@/public/reviews/Matviu.png";
+import Sergey from "@/public/reviews/Sergey.png";
+
 
 export const IconsData: iconType = {
     hero_bg: {
@@ -40,15 +46,15 @@ export const IconsData: iconType = {
         "alt": "Hero image",
     },
     clock: {
-        src:iconClock ,
+        src: iconClock,
         alt: 'Clock',
     },
     leaf: {
-        src:iconLeaf ,
+        src: iconLeaf,
         alt: 'Leaf',
     },
     arrows: {
-        src:iconArrows ,
+        src: iconArrows,
         alt: 'Arrows',
     },
     men_without_glumed: {
@@ -91,9 +97,30 @@ export const IconsData: iconType = {
         src: whyGlumedGrille,
         alt: 'Grille background'
     },
-    tablets:{
-        src:tablets,
-        alt:'Tablets'
-    }
+    tablets: {
+        src: tablets,
+        alt: 'Tablets'
+    },
+    oksana: {
+        src:Oksana,
+        alt:"Oksana"
+    },
+    margo: {
+        src:Margo,
+        alt:"Margo"
+    },
+    matviu: {
+        src:Matviu,
+        alt:"Matviu"
+    },
+    sergey: {
+        src:Sergey,
+        alt:"Sergey"
+    },
+    olena: {
+        src:Olena,
+        alt:"Olena"
+    },
+
 
 }
