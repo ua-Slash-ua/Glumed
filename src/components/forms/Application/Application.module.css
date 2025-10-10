@@ -33,6 +33,13 @@
     background:  linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
     box-shadow: 0 1.548vw 4.646vw 0 rgba(121, 175, 255, 0.66);
     border: transparent;
+    font-family: Manrope, sans-serif;
+
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
 }
 .div{
     width: 100%;

@@ -10,7 +10,10 @@ export default function ApplicationSection() {
         <>
             <section className={s.application_section} id={'application'}>
                 <aside className={s.aside}>
-                    <h3>{ApplicationSectionConfig.title}</h3>
+                    <div className={s.div}>
+                        <h3>{ApplicationSectionConfig.title}</h3>
+
+                    </div>
                     <span>{ApplicationSectionConfig.subtitle}</span>
                     <ul>
                         {

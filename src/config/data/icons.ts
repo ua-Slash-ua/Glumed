@@ -24,6 +24,7 @@ import okHand from "@/public/icons/ok_hand.png";
 import whyGlumedGrille from "@/public/why-glumed-grille.png";
 
 import tablets from "@/public/tablets.png";
+import pills from "@/public/pills.png";
 
 import Oksana from "@/public/reviews/Oksana.png";
 import Margo from "@/public/reviews/Margo.png";
@@ -120,6 +121,10 @@ export const IconsData: iconType = {
     olena: {
         src:Olena,
         alt:"Olena"
+    },
+    pills: {
+        src:pills,
+        alt:"Pills"
     },
 
 
