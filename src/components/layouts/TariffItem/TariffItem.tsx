@@ -57,7 +57,7 @@ export default function TariffItem({
                                 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56"
                                      fill="none">
                                     <circle cx="27.5503" cy="27.5503" r="27.2407" stroke="white"
-                                            stroke-width="0.619108"/>
+                                            strokeWidth="0.619108"/>
                                     <path
                                         d="M30.2919 32.6704C30.0302 32.6704 29.7685 32.9133 29.7685 33.7271C29.7685 34.5409 30.0302 34.7838 30.2919 34.7838C30.5536 34.7838 30.8153 34.5409 30.8153 33.7271C30.8153 32.9133 30.5536 32.6704 30.2919 32.6704Z"
                                         fill="white"/>

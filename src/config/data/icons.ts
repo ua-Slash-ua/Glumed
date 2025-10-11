@@ -24,6 +24,7 @@ import okHand from "@/public/icons/ok_hand.png";
 import whyGlumedGrille from "@/public/why-glumed-grille.png";
 
 import tablets from "@/public/tablets.png";
+import tablets02 from "@/public/tablets_02.png";
 import pills from "@/public/pills.png";
 
 import Oksana from "@/public/reviews/Oksana.png";
@@ -102,29 +103,33 @@ export const IconsData: iconType = {
         src: tablets,
         alt: 'Tablets'
     },
+    tablets_02: {
+        src: tablets02,
+        alt: 'Tablets '
+    },
     oksana: {
-        src:Oksana,
-        alt:"Oksana"
+        src: Oksana,
+        alt: "Oksana"
     },
     margo: {
-        src:Margo,
-        alt:"Margo"
+        src: Margo,
+        alt: "Margo"
     },
     matviu: {
-        src:Matviu,
-        alt:"Matviu"
+        src: Matviu,
+        alt: "Matviu"
     },
     sergey: {
-        src:Sergey,
-        alt:"Sergey"
+        src: Sergey,
+        alt: "Sergey"
     },
     olena: {
-        src:Olena,
-        alt:"Olena"
+        src: Olena,
+        alt: "Olena"
     },
     pills: {
-        src:pills,
-        alt:"Pills"
+        src: pills,
+        alt: "Pills"
     },
 
 
