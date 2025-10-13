@@ -1,0 +1,25 @@
+.burger_btn {
+    display: none;
+    width: 10.66667vw;
+    height: 10.66667vw;
+    padding: 3.2vw 2.13333vw;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2vw;
+
+    border-radius: 2.13333vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    backdrop-filter: blur(0.104vw);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .burger_btn {
+        display: flex;
+    }
+
+    .burger_btn svg {
+        height: 3.73vw;
+        width: 5.33vw;
+    }
+}

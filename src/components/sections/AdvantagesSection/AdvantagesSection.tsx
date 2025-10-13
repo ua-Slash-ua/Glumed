@@ -4,6 +4,7 @@ import BtnOrder from "@/components/ui/BtnOrder/BtnOrder";
 import AdvantageItem from "@/components/layouts/AdvantageItem/AdvantageItem";
 import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import {IconsData} from "@/config/data/icons";
+import StarIcon from "@/components/icons/StarIcon/StarIcon";
 
 export default function AdvantagesSection() {
     const {src: circleSrc, alt: circleAlt} = IconsData.circle_01;
@@ -15,6 +16,7 @@ export default function AdvantagesSection() {
                     <p>{AdvantagesSectionConfig.description}</p>
                     <h3>
                         {AdvantagesSectionConfig.title}
+                        <StarIcon/>
                     </h3>
 
 
@@ -25,13 +27,34 @@ export default function AdvantagesSection() {
                         title={AdvantagesSectionConfig.withoutGlumed.title}
                         icon={AdvantagesSectionConfig.withoutGlumed.icon}
                         image={AdvantagesSectionConfig.withoutGlumed.image}
-                        items={AdvantagesSectionConfig.withoutGlumed.items}/>
+                        items={AdvantagesSectionConfig.withoutGlumed.items}
+                        className={s.desc}
+                    />
                     <AdvantageItem
                         isMain={false}
                         title={AdvantagesSectionConfig.withGlumed.title}
                         icon={AdvantagesSectionConfig.withGlumed.icon}
                         image={AdvantagesSectionConfig.withGlumed.image}
-                        items={AdvantagesSectionConfig.withGlumed.items}/>
+                        items={AdvantagesSectionConfig.withGlumed.items}
+                        className={s.desc}
+                    />
+                    <AdvantageItem
+                        isMain={true}
+                        title={AdvantagesSectionConfig.withoutGlumed.title}
+                        icon={AdvantagesSectionConfig.withoutGlumed.icon}
+                        image={AdvantagesSectionConfig.withoutGlumed.image_mobile}
+                        items={AdvantagesSectionConfig.withoutGlumed.items}
+                        className={s.mobile}
+                    />
+                    <AdvantageItem
+                        isMain={true}
+                        title={AdvantagesSectionConfig.withGlumed.title}
+                        icon={AdvantagesSectionConfig.withGlumed.icon}
+                        image={AdvantagesSectionConfig.withGlumed.image_mobile}
+                        items={AdvantagesSectionConfig.withGlumed.items}
+                        className={s.mobile}
+                        isMobile={true}
+                    />
                 </div>
                 <BtnOrder textContent={'Дізнатися, чи підходить мені Glumed'} className={s.btn_order}/>
                 <IconComponent src={circleSrc} alt={circleAlt} className={s.circle}/>

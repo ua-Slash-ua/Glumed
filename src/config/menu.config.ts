@@ -13,11 +13,11 @@ export const MenuConfig = [
     },
     {
         name: "Ціни та акції",
-        path: "#priceandsales"
+        path: "#tariffs"
     },
     {
         name: "Сертифікати",
-        path: "#whyglumed"
+        path: "#certificates"
     },
     {
         name: "FAQ",

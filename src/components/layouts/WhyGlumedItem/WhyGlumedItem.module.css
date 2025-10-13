@@ -27,11 +27,6 @@
 
 }
 
-.content div {
-    width: 2.29167vw;
-    height: 2.29167vw;
-
-}
 
 .content h5 {
     color: #000;
@@ -68,10 +63,16 @@
 }
 
 .icon_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 3.4375vw;
     height: 3.4375vw;
     border-radius: 3.4375vw;
     background: #FCFDFF;
+    position: absolute;
+    top: -1.25vw;
 
 }
 
@@ -98,5 +99,73 @@
 .icon_middle img {
     width: 1.14583vw;
     height: 1.19792vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        /*width: 91.46667vw;*/
+        height: 58.66667vw;
+        flex-shrink: 0;
+
+    }
+
+    .content {
+        border-radius: 2.66667vw;
+        gap: 7.12vw;
+        padding-top: 12.96vw;
+    }
+
+    .content p {
+        font-size: 3.73333vw;
+        width: 77.74667vw;
+
+
+    }
+
+    .content h5 {
+        font-size: 4.8vw;
+        width: 59.9616vw;
+
+    }
+
+    .icon_container {
+        width: 16.7688vw !important;
+        height: 16.7688vw !important;
+        flex-shrink: 0;
+        border-radius: 16.7688vw !important;
+        top: -8vw !important;
+    }
+
+    .icon_middle {
+        width: 11.9416vw !important;
+        height: 11.9416vw !important;
+        flex-shrink: 0 !important;
+        border-radius: 11.9416vw !important;
+        box-shadow: 0 1.374vw 7.555vw 0 rgba(168, 188, 203, 0.33) !important;
+
+    }
+
+    .icon_middle div {
+        width: 5.5544vw !important;
+        height: 5.88107vw !important;
+        flex-shrink: 0;
+        aspect-ratio: 20.83/22.05;
+    }
+
+    .icon_middle div img {
+        width: 100%;;
+        height: 100%;
+    }
+
+    .foreground {
+        width: 81.33333vw;
+        height: 43.2vw;
+        flex-shrink: 0;
+        border-radius: 2.5408vw;
+        top: 19vw;
+        left: 5vw;
+    }
+
 }
 

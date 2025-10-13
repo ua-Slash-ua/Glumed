@@ -2,6 +2,7 @@ import s from './Header.module.css'
 import {MenuConfig} from "@/config/menu.config";
 import MenuItem from "@/components/layouts/Header/MenuItem/MenuItem";
 import BtnOrder from "@/components/ui/BtnOrder/BtnOrder";
+import BurgerBtn from "@/components/ui/BurgerBtn/BurgerBtn";
 
 export default function Header() {
     return (
@@ -24,6 +25,7 @@ export default function Header() {
                     </nav>
                     <BtnOrder textContent={"Замовити"}/>
                 </div>
+                <BurgerBtn/>
             </header>
         </>
     )

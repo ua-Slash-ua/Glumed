@@ -32,3 +32,21 @@
     line-height: 111%; /* 2.17594rem */
     letter-spacing: -0.03922vw;
 }
+
+@media screen and (max-width: 1024px) {
+    .l_side{
+        display: none;
+
+    }
+    .header{
+        padding: 4.26667vw 4.27vw 0.06693vw 4.27vw;
+
+    }
+    .r_side span{
+        font-size: 10.0368vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 111%; /* 11.1408rem */
+        letter-spacing: -0.2008vw;
+    }
+}

@@ -21,6 +21,10 @@ body {
     width: 100vw;
     background: #F5F6F7;
 }
+html{
+    background: #F5F6F7;
+    scroll-behavior: smooth;
+}
 
 
 /* Для Webkit-браузерів: Chrome, Edge, Safari */

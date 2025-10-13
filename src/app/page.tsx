@@ -7,6 +7,8 @@ import ReviewSection from "@/components/sections/ReviewSection/ReviewSection";
 import IconBackground from "@/components/icons/IconBackground/IconBackground";
 import ApplicationSection from "@/components/sections/ApplicationSection/ApplicationSection";
 import TariffSection from "@/components/sections/TariffSection/TariffSection";
+import CertificatesSection from "@/components/sections/CertificatesSection/CertificatesSection";
+import FAQSection from "@/components/sections/FAQSection/FAQSection";
 
 export default function Home() {
     return (
@@ -17,9 +19,11 @@ export default function Home() {
             <ReviewSection/>
             <ApplicationSection/>
             <TariffSection/>
+            <CertificatesSection/>
+            <FAQSection/>
 
 
-            <IconBackground/>
+            {/*<IconBackground/>*/}
         </>
     );
 }

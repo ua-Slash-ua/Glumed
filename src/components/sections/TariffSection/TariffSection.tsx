@@ -6,9 +6,11 @@ import {IconsData} from "@/config/data/icons";
 import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import clsx from "clsx";
 import {useEffect, useState} from "react";
+import StarIcon from "@/components/icons/StarIcon/StarIcon";
 const DEADLINE = new Date("2025-10-15T00:00:00"); // приклад дати завершення
 export default function TariffSection() {
     const {src: tablet02Src, alt: tablet02Alt} = IconsData.tablets_02;
+    const {src: blurBgSrc, alt: blurBgAlt} = IconsData.blur_bg;
 
     const [time, setTime] = useState<number[] >([0,0,0,0,0,0]);
 
@@ -20,10 +22,11 @@ export default function TariffSection() {
     }, []);
 
     return (<>
-        <section className={s.tariff_section}>
+        <section className={s.tariff_section} id={'tariffs'}>
             <div className={s.title}>
                 <h3>
                     {TariffSectionConfig.title}
+                    <StarIcon className={s.star}/>
                 </h3>
             </div>
             <div className={s.container}>
@@ -103,11 +106,13 @@ export default function TariffSection() {
                 <IconComponent key={1} src={tablet02Src} alt={tablet02Alt} className={clsx(s.sales_icon, s.first)}/>
                 <IconComponent key={2} src={tablet02Src} alt={tablet02Alt} className={clsx(s.sales_icon, s.second)}/>
             </div>
+            <IconComponent src={blurBgSrc} alt={blurBgAlt} className={s.blur}/>
         </section>
 
 
     </>)
 }
+
 
 function getTimeRemaining(endTime: Date): number[] {
     const total = endTime.getTime() - new Date().getTime();

@@ -1,12 +1,13 @@
 import {IconsData} from "@/config/data/icons";
 
 export const AdvantagesSectionConfig = {
-    title: 'Glumed допомагає повернути контроль',
-    description: 'З діабетом кожен день здається боротьбою',
+    title: 'Glumed допомагає\n повернути контроль',
+    description: 'З діабетом кожен день\n здається боротьбою',
     withGlumed: {
         title: 'З Glumed',
         icon: IconsData.check_mark,
         image: IconsData.men_with_glumed,
+        image_mobile: IconsData.men_with_glumed_mobile,
         items: [
             'Стабільний цукор після їжі й протягом дня',
             'Енергія для прогулянок і щоденних справ',
@@ -20,6 +21,7 @@ export const AdvantagesSectionConfig = {
         title: 'Без Glumed',
         icon: IconsData.dagger,
         image: IconsData.men_without_glumed,
+        image_mobile: IconsData.men_without_glumed_mobile,
         items: [
             'Нестабільний цукор, різкі стрибки після їжі',
             'Постійна втома та слабкість',

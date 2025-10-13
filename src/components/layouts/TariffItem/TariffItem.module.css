@@ -115,7 +115,7 @@
     font-size: 2.60417vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 111%; /* 2.89063rem */
+    line-height: 111%; /* 2.89063vw */
     letter-spacing: -0.05208vw;
     text-decoration-line: line-through;
     margin-bottom: 0.28vw;
@@ -127,7 +127,7 @@
     font-size: 2.16005vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 111%; /* 2.39766rem */
+    line-height: 111%; /* 2.39766vw */
     letter-spacing: -0.04318vw;
     margin-bottom: 0.14vw;
 
@@ -204,3 +204,189 @@
     right: -5.6vw;
 }
 
+.salesItem{
+    background: #FFF;
+    display: inline-flex;
+    height: 2vw;
+    width: 7.29vw;
+    padding: 0.32568vw 0.39078vw 0.32568vw 0.52083vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.13026vw;
+    flex-shrink: 0;
+    position: absolute;
+    border-radius: 1.43286vw;
+    top: -1vw;
+    z-index: 3;
+}
+.salesItem p{
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+.salesItem svg  {
+    width: 0.67708vw;
+    height: 0.67708vw;
+    aspect-ratio: 1/1;
+}
+.salesItem path{
+    fill: #F00;
+
+}
+.fullSales{
+    background: #2CB43C;
+}
+
+.fullSales path{
+    fill: #ffffff;
+
+}
+@media screen and (max-width: 1024px) {
+    .item{
+        width: 100%;
+        height: 121.6vw;
+        padding: 6.84vw 5.27vw 7.05vw 6vw;
+        border-radius: 5.86667vw;
+
+    }
+    .item_text h3{
+        font-size: 5.33333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 5.92vw */
+        letter-spacing: -0.10667vw;
+        width: 100%;
+        margin-bottom: 4.9vw;
+        white-space: pre-line;
+    }
+    .item_text h4{
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 50.52053vw;
+        margin-bottom: 4.27vw;
+
+    }
+    .item_text ul{
+        gap: 3.95vw;
+    }
+    .item_text ul li{
+        gap: 2vw;
+    }
+    .item_text ul li p{
+        width: 60vw;
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        white-space: pre-line;
+    }
+    .icon{
+        width: 3.00133vw;
+        height: 3.00133vw;
+        flex-shrink: 0;
+    }
+    .fire{
+        width: 9.1872vw;
+        height: 9.1872vw;
+        flex-shrink: 0;
+    }
+    .prices_container{
+        gap: 3.65vw;
+    }
+    .price_stock{
+        font-size: 8vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 8.88vw */
+        letter-spacing: -0.16vw;
+    }
+    .price_sale{
+        font-size: 6.4vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 7.104vw */
+        letter-spacing: -0.128vw;
+    }
+    .subprice{
+        font-size: 3.2vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .image{
+        width: 61.06667vw;
+        height: 34.93333vw;
+        bottom: 30vw;
+        right: -21.5vw;
+    }
+    .full .image{
+        width: 67.73333vw;
+        height: 67.73333vw;
+        right: -30vw;
+        bottom: 10vw;
+    }
+    .btn_order{
+        width: 100%;
+        height: 13.83893vw;
+        border-radius: 10.97627vw;
+        margin-top: 10.63vw;
+
+    }
+    .btn_order span{
+        font-size: 3.73333vw;
+
+    }
+    .garant{
+        width: 28.79413vw;
+        height: 31.73307vw;
+        right: 0vw;
+        top: 128vw;
+    }
+    .salesItem{
+        background: #FFF;
+        display: inline-flex;
+        height: 7.46667vw;
+        width: fit-content;
+        padding: 1.66747vw 2.0008vw 1.66747vw 2.66667vw;
+        justify-content: center;
+        align-items: center;
+        gap: 0.66693vw;
+        flex-shrink: 0;
+        position: absolute;
+        border-radius: 7.33627vw;
+        top: -5vw;
+    }
+    .salesItem p{
+        color: #000;
+        font-family: Manrope, sans-serif;
+        font-size: 3.2vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+
+    }
+    .salesItem svg  {
+        width: 3.46667vw;
+        height: 3.46667vw;
+        aspect-ratio: 1/1;
+    }
+    .salesItem path{
+        fill: #F00;
+
+    }
+    .fullSales{
+        background: #2CB43C;
+    }
+
+    .fullSales path{
+        fill: #ffffff;
+
+    }
+}

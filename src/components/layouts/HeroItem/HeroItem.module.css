@@ -1,14 +1,14 @@
-.container{
+.container {
     position: relative;
     width: 19.47917vw;
     height: 9.89583vw;
     flex-shrink: 0;
 
 
-
     z-index: 1;
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,11 +24,13 @@
     box-shadow: 0 3.1vw 7.79vw 0 rgba(168, 188, 203, 0.16);
     padding: 1.46vw 5.52vw 1.61vw 1.41vw;
 }
-.content div{
+
+.content div {
     width: 2.29167vw;
     height: 2.29167vw;
 }
-.content p{
+
+.content p {
     color: #000;
     font-family: Manrope, sans-serif;
     font-size: 0.9375vw;
@@ -36,7 +38,8 @@
     font-weight: 500;
     line-height: normal;
 }
-.foreground{
+
+.foreground {
     position: absolute;
     top: 0.73vw;
     left: 1.41vw;
@@ -48,5 +51,44 @@
     box-shadow: 0 3.1vw 7.79vw 0 rgba(168, 188, 203, 0.16);
     z-index: 0;
     background: #FFF;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 74.7vw;
+        height: 35.7vw;
+    }
+    .content {
+
+        position: relative;
+        z-index: 3;
+        width: 74.7vw;
+        height: 35.7vw;
+        padding: 6.4vw;
+        gap: 8.53333vw;
+        border-radius: 3.2vw;
+        box-shadow: 0 12.254vw 30.821vw 0 rgba(168, 188, 203, 0.16);
+
+
+    }
+    .foreground{
+        width: 58.66667vw;
+        height: 32.53333vw;
+        border-radius: 2.06053vw;
+        box-shadow: 0 12.254vw 30.821vw 0 rgba(168, 188, 203, 0.16);
+
+        top: 6vw;
+        left: 7.41vw;
+    }
+    .content div{
+        width: 8vw;
+        height: 8.53333vw;
+        aspect-ratio: 15/16;
+    }
+    .content p{
+        font-size: 4.26667vw;
+
+    }
 
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 13.28vw 3.91vw 9.17vw 3.91vw;
+    padding: 13.28vw 3.91vw 0 3.91vw;
     gap: 2.66vw;
     position: relative;
     z-index: 1;
@@ -15,6 +15,8 @@
     justify-content: space-between;
     align-content: center;
     gap: 0.63vw;
+
+
 }
 
 .title h3 {
@@ -26,6 +28,8 @@
     font-weight: 700;
     line-height: 111%; /* 3.00625rem */
     letter-spacing: -0.05417vw;
+    white-space: pre-line;
+    position: relative;
 }
 
 .title p {
@@ -36,6 +40,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    white-space: pre-line;
 }
 
 .btn_order {
@@ -71,4 +76,66 @@
     height: 22.55208vw;
     flex-shrink: 0;
     filter: blur(1.876vw);
+}
+
+.desc{
+    display: flex!important;
+}
+.mobile{
+    display: none!important;
+}
+@media screen and (max-width: 1024px) {
+    .advantage_section {
+        padding: 0 4.27vw;
+        gap: 8.53vw;
+    }
+    .title{
+        gap: 3.2vw;
+    }
+    .title p{
+
+        font-size: 4.26667vw;
+
+    }
+    .title h3{
+        font-size: 8.53333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 9.472rem */
+        letter-spacing: -0.17067vw;
+    }
+    .container{
+        flex-direction: column;
+        gap: 3.2vw;
+        width: 100%;
+    }
+    .desc{
+        display: none!important;
+    }
+    .mobile{
+        display: flex!important;
+    }
+
+    .container:last-child div div:last-of-type{
+        background: linear-gradient(90deg, rgba(15, 59, 152, 0.00) 0.36%, rgba(15, 59, 152, 0.80) 99.56%);
+
+    }
+    .btn_order{
+        border-radius: 11.43093vw;
+        height: 16.53333vw;
+        padding: 4.8vw 6.4vw;
+        box-shadow: 0 5.163vw 15.489vw 0 rgba(121, 175, 255, 0.66);
+
+    }
+    .btn_order span{
+
+        font-size: 3.73333vw;
+
+    }
+    .circle{
+        display: none;
+    }
+    .spot{
+        display: none;
+    }
 }

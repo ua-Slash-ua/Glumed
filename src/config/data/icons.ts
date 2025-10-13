@@ -3,6 +3,7 @@ import {iconType, ReviewIcons} from "@/types/icon.type";
 import HeroBg from "@/public/hero-bg.png";
 import Garant from "@/public/garant.png";
 import HeroImage from "@/public/hero-image.png";
+import blurBg from "@/public/blur-bg.png";
 
 import iconClock from "@/public/icons/clock.png";
 import iconLeaf from "@/public/icons/leaf.png";
@@ -10,6 +11,8 @@ import iconArrows from "@/public/icons/arrows.png";
 
 import menWithGlumed from "@/public/men-with-glumed.png";
 import menWithOutGlumed from "@/public/men-without-glumed.png";
+import menWithGlumedMobile from "@/public/men-with-glumed-MOBILE.png";
+import menWithOutGlumedMobile from "@/public/men-without-glumed-MOBILE.png";
 
 import dagger from "@/public/icons/dagger.png";
 import checkMark from "@/public/icons/check-mark.png";
@@ -31,7 +34,11 @@ import Oksana from "@/public/reviews/Oksana.png";
 import Margo from "@/public/reviews/Margo.png";
 import Olena from "@/public/reviews/Olena.png";
 import Matviu from "@/public/reviews/Matviu.png";
-import Sergey from "@/public/reviews/Sergey.png";
+import Sergey from "@/public/reviews/Sergey.png"
+
+
+import certificate01 from "@/public/certificates/certificate_01.png";
+import certificate02 from "@/public/certificates/certificate_02.png";
 
 
 export const IconsData: iconType = {
@@ -70,6 +77,14 @@ export const IconsData: iconType = {
     dagger: {
         src: dagger,
         alt: 'Dagger'
+    },
+    men_without_glumed_mobile: {
+        src: menWithOutGlumedMobile,
+        alt: 'men WithOut Glumed'
+    },
+    men_with_glumed_mobile: {
+        src: menWithGlumedMobile,
+        alt: 'men With Glumed'
     },
     check_mark: {
         src: checkMark,
@@ -131,6 +146,18 @@ export const IconsData: iconType = {
         src: pills,
         alt: "Pills"
     },
+    certificate_01:{
+        src:certificate01,
+        alt:'Certificate',
+    },
+    certificate_02:{
+        src:certificate02,
+        alt:'Certificate',
+    },
+    blur_bg:{
+        src:blurBg,
+        alt:'Blur background',
+    }
 
 
 }

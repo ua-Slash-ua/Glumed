@@ -1,0 +1,13 @@
+.star{
+    width: 1.03245vw;
+    height: 1.03245vw;
+    flex-shrink: 0;
+    position: absolute;
+    top: -2vw;
+    left: -1.5vw;
+}
+
+.star svg{
+    width: 100%;
+    height: 100%;
+}

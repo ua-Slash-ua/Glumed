@@ -1,4 +1,4 @@
-.hero_section{
+.hero_section {
     padding: 0 2.55vw;
     width: 100%;
     height: fit-content;
@@ -6,14 +6,16 @@
     position: relative;
 
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: 8.75vw 6.04vw 8.7vw 6.04vw;
 }
-.content{
+
+.content {
     display: flex;
     width: 43.85417vw;
     flex-direction: column;
@@ -21,7 +23,8 @@
     align-items: flex-start;
     gap: 2.29vw;
 }
-.content h1{
+
+.content h1 {
     color: var(--color-primary);
     font-family: Manrope, sans-serif;
     font-size: 3.4375vw;
@@ -29,8 +32,15 @@
     font-weight: 700;
     line-height: 111%; /* 3.81563rem */
     letter-spacing: -0.06875vw;
+    position: relative;
 }
-.content p{
+
+.star {
+    top: -3vw !important;
+    left: -1vw !important;
+}
+
+.content p {
     width: 23.22917vw;
     color: #000;
     font-family: Manrope, sans-serif;
@@ -40,20 +50,22 @@
     line-height: normal;
 }
 
-.hero_bg{
+.hero_bg {
     border-radius: 2.29167vw;
     position: absolute;
     overflow: hidden;
     z-index: -1;
 }
-.hero_icon{
+
+.hero_icon {
     width: 46.40625vw;
     height: 46.40625vw;
     position: absolute;
     top: 3.9vw;
     right: 5.8vw;
 }
-.hero_icon_garant{
+
+.hero_icon_garant {
     width: 12.7vw;
     height: 13.8vw;
     flex-shrink: 0;
@@ -61,13 +73,15 @@
     top: 11.8vw;
     right: 14.3vw;
 }
-.btn_order{
+
+.btn_order {
     width: fit-content;
     padding: 1.45vw 2.45vw;
     height: 4.32292vw;
     flex-shrink: 0;
 }
-.footer{
+
+.footer {
     display: flex;
     flex-direction: row;
     gap: 1.15vw;
@@ -76,4 +90,92 @@
     position: absolute;
     bottom: -5.5vw;
     /*display: none;*/
+}
+
+@media screen and (max-width: 1140px) {
+    .div {
+        height: 192vw;
+        align-self: stretch;
+        border-radius: 6.4vw;
+        background: #FFF;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .container {
+
+    }
+
+    .content {
+        flex-direction: column;
+        /*margin-bottom: 100vw;*/
+        width: fit-content;
+        gap: 5vw;
+    }
+
+    .content h1 {
+        font-size: 8.53333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 9.472rem */
+        letter-spacing: -0.17067vw;
+        width: 66.93333vw;
+    }
+
+    .content p {
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 77.33333vw;
+    }
+
+    .hero_icon {
+        width: 170vw;
+        height: 153.6vw;
+
+        top: 85vw;
+        right: -48vw;
+    }
+
+    .btn_order {
+        width: fit-content;
+        height: 13.86667vw;
+        padding: 4.8vw 6.4vw;
+
+
+    }
+
+    .btn_order span {
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .btn_order span {
+        content: 'Безкоштовна консультація';
+    }
+
+    .hero_icon_garant {
+        width: 36.8vw;
+        height: 38.4vw;
+        top: 108vw;
+        right: 5vw;
+
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 7.47vw;
+        align-items: center;
+        bottom: 8vw;
+        position: relative;
+        z-index: 3;
+    }
+
+    .hero_section {
+        padding:3.2vw 4.4vw 10vw ;
+    }
+
 }

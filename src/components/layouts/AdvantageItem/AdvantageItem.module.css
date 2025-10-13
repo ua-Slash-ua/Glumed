@@ -96,3 +96,42 @@
     -webkit-text-fill-color: initial; /* повертає колір тексту */
     background-clip: initial; /* стандартне значення */
 }
+
+@media screen and (max-width: 1024px) {
+    .item {
+        width: 100%;
+        padding: 6.4vw 0 12.27vw 6vw;
+        gap: 8.53vw;
+        border-radius: 5vw;
+        align-items: flex-start;
+    }
+    .title{
+        gap: 1.6vw;
+        padding: 1.6vw 2.88vw;
+        border-radius: 3.52vw;
+
+    }
+    .title .icon{
+        width: 4.16vw;
+        height: 3.84vw;
+    }
+    .title span{
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 4.144rem */
+        letter-spacing: -0.07467vw;
+    }
+    .background_image img, .background_image{
+        height: 124.8vw;
+        width: fit-content;
+    }
+    .item ul{
+        gap: 6.13vw;
+    }
+
+    .item_mobile .foreground{
+        background: linear-gradient(90deg, rgba(15, 59, 152, 0.00) 0.36%, rgba(15, 59, 152, 0.80) 99.56%);
+        rotate: 180deg;
+    }
+}

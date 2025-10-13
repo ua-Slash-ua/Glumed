@@ -61,3 +61,37 @@
     box-shadow: 0 0.2176vw 0.4351vw 0 rgba(68, 65, 244, 0.33);
 
 }
+
+@media screen and (max-width: 1024px) {
+    .item{
+        gap: 3.2vw;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .circle_container{
+        width: 6.4vw;
+        height: 6.4vw;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
+        border-radius: 6.4vw;
+    }
+    .circle_middle{
+        width: 3.10293vw;
+        height: 3.10293vw;
+        flex-shrink: 0;
+        border-radius: 6.4vw;
+    }
+    .circle_main{
+        width: 1.16373vw;
+        height: 1.16373vw;
+        flex-shrink: 0;
+        border-radius: 6.4vw;
+    }
+    .item p{
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 600;
+
+        width: 47.2vw;
+    }
+}

@@ -3,6 +3,7 @@ import {ApplicationSectionConfig} from "@/config/data/ApplicationSection";
 import {IconsData} from "@/config/data/icons";
 import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import Application from "@/components/forms/Application/Application";
+import StarIcon from "@/components/icons/StarIcon/StarIcon";
 
 export default function ApplicationSection() {
     const {src: garantSrc, alt: garantAlt} = IconsData.garant;
@@ -11,7 +12,10 @@ export default function ApplicationSection() {
             <section className={s.application_section} id={'application'}>
                 <aside className={s.aside}>
                     <div className={s.div}>
-                        <h3>{ApplicationSectionConfig.title}</h3>
+                        <h3>
+                            {ApplicationSectionConfig.title}
+                            <StarIcon/>
+                        </h3>
 
                     </div>
                     <span>{ApplicationSectionConfig.subtitle}</span>

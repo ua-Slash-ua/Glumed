@@ -3,10 +3,11 @@ import {AdvantageItemProps} from "@/types/props/AdvantageItemProps";
 import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import AdvantageLineItem from "@/components/layouts/AdvantageItem/AdvantageLineItem/AdvantageLineItem";
 
-export default function AdvantageItem({isMain,items,image,icon,title}:AdvantageItemProps) {
+export default function AdvantageItem({isMain,items,image,icon,title,className, isMobile =false}:AdvantageItemProps) {
+    console.log(isMobile)
     return(
         <>
-            <div className={`${s.item} ${isMain? s.item_left :''}`}>
+            <div className={`${s.item} ${isMain? s.item_left :''} ${isMobile  ? s.item_mobile :''} ${className??''}`}>
                 <div className={s.title}>
                     <IconComponent src={icon.src} alt={icon.alt} className={s.icon}/>
                     <span>{title}</span>

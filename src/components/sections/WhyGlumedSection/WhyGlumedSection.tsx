@@ -5,6 +5,7 @@ import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import {IconsData} from "@/config/data/icons";
 import HeroItem from "@/components/layouts/HeroItem/HeroItem";
 import WhyGlumedItem from "@/components/layouts/WhyGlumedItem/WhyGlumedItem";
+import StarIcon from "@/components/icons/StarIcon/StarIcon";
 
 export default function WhyGlumedSection() {
     const {src: grilleSrc, alt: grilleAlt} = IconsData.why_glumed_grille;
@@ -13,7 +14,10 @@ export default function WhyGlumedSection() {
     return (
         <>
             <section className={s.why_glumed_section} id={'whyglumed'}>
-                <h3 className={s.title}>{data.title}</h3>
+                <h3 className={s.title}>
+                    {data.title}
+                    <StarIcon/>
+                </h3>
                 <div className={s.container}>
                     <div className={s.column}>
                         {

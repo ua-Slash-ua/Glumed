@@ -5,5 +5,7 @@ export type AdvantageItemProps = {
     title: string,
     icon: iconItem,
     image: iconItem,
-    items: string[]
+    items: string[],
+    className?: string,
+    isMobile?: boolean,
 }
