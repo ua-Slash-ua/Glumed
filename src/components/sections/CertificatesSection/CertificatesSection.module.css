@@ -57,13 +57,15 @@
     letter-spacing: -0.05417vw;
     margin-bottom: 3.18vw;
 }
-.main ul{
+
+.main ul {
     display: flex;
     flex-direction: column;
     gap: 0.92vw;
     margin-bottom: 2.74vw;
 }
-.main ul li{
+
+.main ul li {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -78,31 +80,33 @@
     white-space: pre-line;
 }
 
-.plus{
+.plus {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius:1.5vw;
+    border-radius: 1.5vw;
     width: 1.5625vw;
     height: 1.5625vw;
     flex-shrink: 0;
     background: #FFF;
 }
-.plus svg{
+
+.plus svg {
     width: 0.5162vw;
     height: 0.5162vw;
     flex-shrink: 0;
 }
 
-.certificates{
+.certificates {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2.34vw;
 }
-.certificate_image{
+
+.certificate_image {
     width: 23.59375vw;
     height: 35.15625vw;
     flex-shrink: 0;
@@ -110,6 +114,96 @@
 
     border-radius: 1.14583vw;
     border: 0.156vw solid #3D93F7;
-    background:  lightgray 50% / cover no-repeat;
+    background: lightgray 50% / cover no-repeat;
     overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+    .certificates_section {
+        flex-direction: column;
+
+    }
+
+    .aside {
+        background: #F5F6F7;
+
+        width: 100%;
+        height: fit-content;
+        gap: 8.53vw;
+        padding: 0 4.27vw;
+        align-items: center;
+
+    }
+
+    .aside h3 {
+        font-size: 8.53333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 9.472rem */
+        letter-spacing: -0.17067vw;
+    }
+
+    .preview {
+        width: 100%;
+        height: fit-content;
+        border-radius: 3vw;
+        overflow: hidden;
+        margin-bottom: 16vw;
+    }
+
+    .main {
+        width: 100%;
+        height: fit-content;
+        padding: 16vw 4.27vw 4.27vw;
+    }
+
+    .main h3 {
+        font-size: 8.53333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 9.472rem */
+        letter-spacing: -0.17067vw;
+        text-align: start;
+        margin-bottom: 7.47vw;
+    }
+
+    .main ul {
+        gap: 3.2vw;
+        margin-bottom: 7.47vw;
+
+    }
+
+    .main ul li {
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 133%; /* 4.96533rem */
+        gap: 3.2vw;
+
+    }
+
+    .certificates {
+        flex-direction: column;
+    }
+
+    .plus {
+        width: 5.86667vw;
+        height: 5.86667vw;
+        border-radius: 5.86667vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plus svg {
+        width: 1.93813vw;
+        height: 1.93813vw;
+    }
+    .certificate_image{
+        width: 100%;
+        height: fit-content;
+        border-radius: 4.26667vw;
+        aspect-ratio: 49/73;
+    }
 }

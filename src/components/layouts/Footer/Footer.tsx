@@ -37,6 +37,10 @@ export default function Footer() {
                             )
                         })}
                     </ul>
+                    <BtnOrder textContent={'Замовити'} className={s.btn_order_mob}/>
+                </div>
+                <div className={s.line}>
+
                 </div>
                 <div className={s.main}>
                     <BtnOrder textContent={'Замовити'} className={s.btn_order}/>
@@ -76,6 +80,23 @@ export default function Footer() {
                         }
                     </ul>
                 </div>
+                <div className={s.line}>
+
+                </div>
+                <aside className={s.aside_mob}>
+                    <ul className={s.pages_mob}>
+                        {mainConfig.pages.map((page, index) => {
+                            return (
+                                <li key={index}>
+                                    <a href={page.href}>{page.name}</a>
+
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    <p>{mainConfig.subtitle} </p>
+                </aside>
+
             </footer>
         </>
     )

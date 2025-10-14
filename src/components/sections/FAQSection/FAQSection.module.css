@@ -27,7 +27,26 @@
 
 }
 
-.faq_container{
+.faq_container {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) {
+    .faq_section {
+        padding: 0 2.93vw 16vw 2.93vw;
+    }
+
+    .title h3 {
+        font-size: 8.53333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111%; /* 9.472rem */
+        letter-spacing: -0.17067vw;
+        margin-bottom: 8.53vw;
+    }
+
+    .faq_container {
+
+    }
 }

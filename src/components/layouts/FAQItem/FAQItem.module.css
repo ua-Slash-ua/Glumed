@@ -80,3 +80,51 @@
     max-height: 10vw; /* або більше, щоб вміст помістився */
 }
 
+@media screen and (max-width: 1024px) {
+    .item {
+    }
+
+    .number {
+        font-size: 3.2vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 3.84rem */
+    }
+
+    .content h5 {
+        font-size: 4.8vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 5.76rem */
+        letter-spacing: -0.144vw;
+    }
+
+    .content .answer {
+        max-width: 57.33333vw;
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 5.22667rem */
+    }
+
+    .activate {
+        width: 8.53333vw;
+        height: 8.53333vw;
+        aspect-ratio: 1/1;
+        border-radius: 4.26667vw;
+    }
+
+    .activate svg {
+        width: 3.73333vw;
+    }
+
+    .answer.active {
+        opacity: 1;
+        max-height: 60vw; /* або більше, щоб вміст помістився */
+    }
+
+    .item {
+        padding: 6.4vw 0;
+    }
+}
+
