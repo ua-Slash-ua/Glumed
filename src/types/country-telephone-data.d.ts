@@ -8,4 +8,10 @@ declare module 'country-telephone-data' {
     }[];
 }
 
+declare module '*.mp4' {
+    const src: string;
+    export default src;
+}
+
+
 

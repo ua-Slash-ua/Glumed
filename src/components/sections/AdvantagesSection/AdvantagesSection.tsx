@@ -16,7 +16,7 @@ export default function AdvantagesSection() {
                     <p>{AdvantagesSectionConfig.description}</p>
                     <h3>
                         {AdvantagesSectionConfig.title}
-                        <StarIcon/>
+                        <StarIcon className={s.star}/>
                     </h3>
 
 

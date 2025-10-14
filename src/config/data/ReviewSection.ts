@@ -1,14 +1,16 @@
 import {IconsData} from "@/config/data/icons";
+import {videos} from "@/config/data/videos";
 
 export const ReviewSectionConfig = {
-    title:'Що кажуть ті, хто вже спробував Glumed',
+    title: 'Що кажуть ті, хто вже спробував Glumed',
     items:
         [
             {
                 name: 'Олена',
                 age: '50 років',
                 review: 'Після Глюмеда цукор знизився до 6,9, сон став кращим і ноги перестали крутити вночі',
-                image: IconsData.olena
+                image: IconsData.olena,
+                video: videos.reviews["1"]
             },
             {
                 name: 'Матвій',
@@ -17,7 +19,8 @@ export const ReviewSectionConfig = {
                 review:
                     'Після Глюмеда цукор знизився до 6,9, сон став кращим і ноги перестали крутити вночі',
                 image:
-                IconsData.matviu
+                IconsData.matviu,
+                video: videos.reviews["2"]
             }
             ,
             {
@@ -27,7 +30,8 @@ export const ReviewSectionConfig = {
                 review:
                     'Після Глюмеда цукор знизився до 6,9, сон став кращим і ноги перестали крутити вночі',
                 image:
-                IconsData.sergey
+                IconsData.sergey,
+                video: videos.reviews["3"]
             }
             ,
             {
@@ -37,7 +41,8 @@ export const ReviewSectionConfig = {
                 review:
                     'Після Глюмеда цукор знизився до 6,9, сон став кращим і ноги перестали крутити вночі',
                 image:
-                IconsData.oksana
+                IconsData.oksana,
+                video: videos.reviews["4"]
             }
             ,
             {
@@ -47,7 +52,8 @@ export const ReviewSectionConfig = {
                 review:
                     'Після Глюмеда цукор знизився до 6,9, сон став кращим і ноги перестали крутити вночі',
                 image:
-                IconsData.margo
+                IconsData.margo,
+                video: videos.reviews["5"]
             }
             ,
         ]

@@ -43,6 +43,8 @@
     height: 34.56292vw;
     width: 19.51089vw;
     margin-right: 1.65vw;
+    border-radius: 1vw;
+    overflow: hidden;
 }
 
 .image {
@@ -158,8 +160,28 @@
 .active_li:hover {
     background: linear-gradient(265deg, #116fd8 -1.54%, #204cf0 100%);
 }
+.playBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+    border-radius: 3.75vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%) !important;
+    width: 3.75vw;
+    height: 3.75vw;
+    flex-shrink: 0;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+}
+.playBtn svg{
+    width: 60%;
+}
 @media screen and (max-width: 1024px) {
     .nav_mobile {
         display: flex;
@@ -188,6 +210,7 @@
         border-radius: 4vw;
         overflow: hidden;
     }
+
 
     .swiper_slide span {
         font-size: 4.26667vw;
@@ -223,5 +246,15 @@
     .review_section {
         margin: 16vw 4.27vw 33.6vw;
         padding: 0;
+    }
+    .star{
+        display: none;
+    }
+    .playBtn{
+        width: 13.86667vw;
+        height: 13.86667vw;
+        flex-shrink: 0;
+        border-radius: 13.86667vw;
+
     }
 }

@@ -14,7 +14,7 @@ export default function ApplicationSection() {
                     <div className={s.div}>
                         <h3>
                             {ApplicationSectionConfig.title}
-                            <StarIcon/>
+                            <StarIcon className={s.star}/>
                         </h3>
 
                     </div>

@@ -16,7 +16,7 @@ export default function WhyGlumedSection() {
             <section className={s.why_glumed_section} id={'whyglumed'}>
                 <h3 className={s.title}>
                     {data.title}
-                    <StarIcon/>
+                    <StarIcon className={s.star}/>
                 </h3>
                 <div className={s.container}>
                     <div className={s.column}>

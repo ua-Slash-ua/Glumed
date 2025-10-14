@@ -224,7 +224,8 @@
         padding: 0 4.27vw;
     }
 
-    .title {
+    .title h3 {
+        width: 87.73333vw;
         font-size: 7.46667vw;
         font-style: normal;
         font-weight: 700;
@@ -267,12 +268,6 @@
         margin-bottom: 5.87vw;
     }
 
-    .title h3 {
-        font-size: 3.73333vw !important;
-        font-style: normal !important;
-        font-weight: 700 !important;
-        line-height: 99% !important; /* 3.696rem */
-    }
 
     .time_container {
         gap: 4.95vw;

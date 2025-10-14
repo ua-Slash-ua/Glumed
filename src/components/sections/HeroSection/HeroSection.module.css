@@ -177,5 +177,11 @@
     .hero_section {
         padding:3.2vw 4.4vw 10vw ;
     }
+    .star{
+        width: 3.2vw!important;
+        height: 3.2vw!important;
+        top: -8vw !important;
+        left: -3.5vw !important;
+    }
 
 }

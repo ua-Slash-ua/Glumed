@@ -1,0 +1,150 @@
+.background {
+
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.27);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    padding: 4.8vw 4.27vw;
+
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.07vw;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 3.2vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    padding: 1.92vw 3.47vw 2.08vw 3.2vw;
+}
+
+.head span {
+    color: #FFF;
+    font-family: Manrope, sans-serif;
+    font-size: 9.30533vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 111%; /* 10.3288rem */
+    letter-spacing: -0.18613vw;
+}
+
+.close {
+    display: flex;
+    width: 9.88933vw;
+    height: 9.88933vw;
+    padding: 2.96667vw 1.97787vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2.96667vw;
+    flex-shrink: 0;
+
+    border-radius: 1.97787vw;
+    background: #FFF;
+    backdrop-filter: blur(0.494vw);
+    cursor: pointer;
+}
+
+.close svg {
+    width: 4.20133vw;
+    height: 4.20587vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 6.67vw 4.27vw 14.13vw 4.27vw;
+    border-radius: 3.2vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3.02vw;
+}
+
+.menuItem {
+    color: #FFF;
+    font-family: Manrope, sans-serif;
+    font-size: 4.8vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.btn_orders {
+    width: fit-content;
+    display: inline-flex;
+    height: 14.66667vw;
+    padding: 4.8vw 6.4vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2.66667vw;
+    flex-shrink: 0;
+    border-radius: 11.43093vw;
+    background: #FFF;
+    box-shadow: none    ;
+    margin-bottom:7.73vw ;
+    margin-top: 7.73vw;
+}
+
+.btn_orders span {
+    font-family: Manrope, sans-serif;
+    font-size: 3.73333vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.con{
+    display: flex;
+    flex-direction: column;
+    gap: 3.63vw;
+}
+.con li a{
+    display: flex;
+    flex-direction: row;
+    gap: 3.2vw;
+    align-items: center;
+}
+.con .icon{
+    width: 5.43227vw;
+    height: 5.43227vw;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    border-radius: 3.07143vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.con .icon svg{
+    width: 2.45973vw;
+    height: 2.45973vw;
+    flex-shrink: 0;
+}
+.con p{
+    color: #FFF;
+    font-family: Manrope, sans-serif;
+    font-size: 3.73333vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 3.73333rem */
+    letter-spacing: -0.07467vw;
+}
+
+

@@ -32,6 +32,8 @@
     font-weight: 800;
     line-height: 111%; /* 4.06932rem */
     letter-spacing: -0.07333vw;
+    text-transform: uppercase;
+
 }
 
 .head p {
