@@ -9,7 +9,7 @@ export default function Header() {
         <>
             <header className={s.header}>
                 <div className={s.r_side}>
-                    <span>Glumed</span>
+                    <span>GLUMED</span>
                 </div>
                 <div className={s.l_side}>
                     <nav>

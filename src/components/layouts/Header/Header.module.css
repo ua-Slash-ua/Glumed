@@ -25,7 +25,7 @@
 }
 .r_side span{
     color: var(--color-primary);
-    font-family: Manrope , sans-serif;
+    font-family: var(--font-manrope) , sans-serif;
     font-size: 1.96031vw;
     font-style: normal;
     font-weight: 800;

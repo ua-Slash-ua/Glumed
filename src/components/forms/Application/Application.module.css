@@ -1,7 +1,7 @@
-.form{
+.form {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     border-radius: 2.29167vw;
     background: #F5F6F7;
 
@@ -11,12 +11,13 @@
     padding: 2.97vw 6.87vw 4.01vw 6.82vw;
     gap: 1.72vw;
 }
-.form h3{
+
+.form h3 {
     width: 16.35417vw;
 
     color: #000;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.04167vw;
     font-style: normal;
     font-weight: 500;
@@ -24,58 +25,137 @@
 
 }
 
-.btn_send{
+.btn_send {
     width: 25.05208vw;
     height: 4.32292vw;
     flex-shrink: 0;
 
     border-radius: 3.42865vw;
-    background:  linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%);
     box-shadow: 0 1.548vw 4.646vw 0 rgba(121, 175, 255, 0.66);
     border: transparent;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
 
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     color: white;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
 }
-.div{
+
+.btn_send span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn_send::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(265deg, #1c73d9 -1.54%, #1539b9 100%);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.btn_send:hover::before {
+    opacity: 1;
+}
+
+.btn_send:hover {
+    box-shadow: 0 1.548vw 4.646vw 0 rgba(121, 175, 255, 0.85);
+}
+
+.btn_send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn_send:disabled::before {
+    display: none;
+}
+
+.div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.form p{
 
+.div p {
     color: rgba(0, 0, 0, 0.66);
     text-align: center;
-    font-family: Manrope, serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.72917vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    width: 13vw;
+}
+
+.form .div p {
+
+    color: rgba(0, 0, 0, 0.66);
+    text-align: center;
+    font-family: var(--font-manrope), serif;
+    font-size: 0.72917vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 15vw;
 
 }
+
+.msg_suc {
+    width: fit-content;
+    font-family: var(--font-manrope), sans-serif;
+    color: #57dc26;
+    padding: 0.833vw; /* 12px при 1440px */
+    border-radius: 0.556vw; /* 8px при 1440px */
+    text-align: center;
+    margin-top: 0.833vw; /* 12px при 1440px */
+    white-space: pre-line;
+}
+
+.msg_err {
+    width: fit-content;
+    font-family: var(--font-manrope), sans-serif;
+    color: #dc2626;
+    padding: 0.833vw; /* 12px при 1440px */
+    border-radius: 0.556vw; /* 8px при 1440px */
+    text-align: center;
+    margin-top: 0.833vw; /* 12px при 1440px */
+    white-space: pre-line;
+
+}
+
 @media screen and (max-width: 1024px) {
-    .form{
+    .form {
         width: 100%;
         padding: 13.86667vw 6.4vw;
         gap: 6.13vw;
         border-radius: 6.4vw;
 
     }
-    .form h3{
+
+    .form h3 {
         width: 58.93333vw;
         font-size: 3.73333vw;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
     }
-    .btn_send{
+
+    .btn_send {
         width: 100%;
         height: 16.53333vw;
         padding: 4.8vw 6.4vw;
@@ -90,11 +170,13 @@
         line-height: normal;
 
     }
-    .div p{
+
+    .div p {
         width: 63.46667vw;
         font-size: 3.2vw;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
     }
+
 }

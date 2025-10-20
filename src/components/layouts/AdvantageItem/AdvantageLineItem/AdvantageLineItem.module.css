@@ -45,7 +45,7 @@
 
 .item p{
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.04167vw;
     font-style: normal;
     font-weight: 700;

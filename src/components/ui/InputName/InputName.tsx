@@ -1,7 +1,9 @@
 import s from './InputName.module.css'
 import {InputNameProps} from "@/types/props/InputNameProps";
+import {FieldValues} from "react-hook-form";
+import {ApplicationForm} from "@/components/forms/Application/Application";
 
-export default function InputName({registerAction , registerOptions, placeholder, className, name, error}: InputNameProps) {
+export default function InputName<TFieldValues extends FieldValues>({registerAction , registerOptions, placeholder, className, name, error}: InputNameProps<ApplicationForm>) {
     return (
         <>
             <div className={`${s.container} ${className ?? ''}`}>

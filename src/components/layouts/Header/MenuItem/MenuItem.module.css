@@ -1,6 +1,6 @@
 .item{
     color: #000;
-    font-family: Manrope , sans-serif;
+    font-family: var(--font-manrope) , sans-serif;
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 500;

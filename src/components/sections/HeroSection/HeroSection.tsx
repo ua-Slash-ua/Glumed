@@ -40,7 +40,7 @@ export default function HeroSection() {
                                 {HeroSectionConfig.description}
                             </p>
                             <BtnOrder
-                                textContent={width > 1024 ? 'Отримати безкоштовну консультацію' : 'Безкоштовна консультація'}
+                                textContent={width <= 1024 ? 'Безкоштовна консультація' : 'Отримати безкоштовну консультацію'}
                                 className={s.btn_order}/>
                         </div>
                         <IconComponent src={HeroIconSrc} alt={HeroIconAlt} className={s.hero_icon}/>

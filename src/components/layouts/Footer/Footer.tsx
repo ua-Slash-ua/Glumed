@@ -15,24 +15,27 @@ export default function Footer() {
                             {mainConfig.subtitle}
                         </p>
                     </div>
-                    <ul className={s.pages}>
-                        {mainConfig.pages.map((page, index) => {
-                            return (
-                                <li key={index}>
-                                    <a href={page.href}>{page.name}</a>
+                    {/*<ul className={s.pages}>*/}
+                    {/*    {mainConfig.pages.map((page, index) => {*/}
+                    {/*        return (*/}
+                    {/*            <li key={index}>*/}
+                    {/*                <a href={page.href}>{page.name}</a>*/}
 
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    {/*            </li>*/}
+                    {/*        )*/}
+                    {/*    })}*/}
+                    {/*</ul>*/}
                 </div>
                 <div className={s.menu}>
                     <h5>Меню</h5>
                     <ul className={s.menu}>
+                        <li>
+                            <Link href='/'>Головна</Link>
+                        </li>
                         {MenuConfig.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <a href={item.path}>{item.name}</a>
+                                    <Link href={item.path}>{item.name}</Link>
                                 </li>
                             )
                         })}

@@ -22,7 +22,7 @@
 
 .aside h3 {
     color: var(--color-primary);
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 2.70833vw;
     font-style: normal;
     font-weight: 700;
@@ -48,8 +48,8 @@
 
 .main h3 {
     color: #FFF;
-    text-align: center;
-    font-family: Manrope, sans-serif;
+    /*text-align: center;*/
+    font-family: var(--font-manrope), sans-serif;
     font-size: 2.70833vw;
     font-style: normal;
     font-weight: 700;
@@ -72,7 +72,7 @@
     gap: 0.73vw;
 
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.19792vw;
     font-style: normal;
     font-weight: 700;
@@ -117,6 +117,10 @@
     background: lightgray 50% / cover no-repeat;
     overflow: hidden;
 }
+.certificates .certificate_image:first-child img {
+    max-width: 106%;
+}
+
 
 @media screen and (max-width: 1024px) {
     .certificates_section {
@@ -150,7 +154,9 @@
         overflow: hidden;
         margin-bottom: 16vw;
     }
-
+    .preview img{
+        width: 100%;
+    }
     .main {
         width: 100%;
         height: fit-content;
@@ -204,6 +210,5 @@
         width: 100%;
         height: fit-content;
         border-radius: 4.26667vw;
-        aspect-ratio: 49/73;
     }
 }

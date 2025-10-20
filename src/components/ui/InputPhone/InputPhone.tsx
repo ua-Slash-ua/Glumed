@@ -2,8 +2,10 @@
 import 'flag-icons/css/flag-icons.min.css';
 import s from './InputPhone.module.css'
 import {InputNameProps} from "@/types/props/InputNameProps";
-import {useEffect, useRef, useState} from "react";
+import {ChangeEvent, useEffect, useRef, useState} from "react";
 import {phoneList} from "@/config/phone-codes.config";
+import {ApplicationForm} from "@/components/forms/Application/Application";
+import {FieldValues} from "react-hook-form";
 
 export default function InputPhone({
                                        registerAction,
@@ -11,9 +13,9 @@ export default function InputPhone({
                                        placeholder,
                                        className,
                                        name,
-                                       error,
-                                       phoneCode
-                                   }: InputNameProps) {
+                                       error
+                                   }: InputNameProps<ApplicationForm>)
+ {
     const [value, setValue] = useState<string>('');
     const [phone, setPhone] = useState<{
         iso2: string,
@@ -45,7 +47,7 @@ export default function InputPhone({
                         name,
                         value: fullPhone
                     }
-                } as any);
+                }as unknown as ChangeEvent<HTMLInputElement> );
                 isInitialized.current = true;
             }
         }
@@ -66,14 +68,19 @@ export default function InputPhone({
     useEffect(() => {
         if (isInitialized.current) {
             const reg = registrationRef.current;
+
             if (reg?.onChange) {
                 const fullPhone = phone.dialCode + value;
-                reg.onChange({
+
+                // Створюємо "псевдо" ChangeEvent для input
+                const event = {
                     target: {
                         name,
-                        value: fullPhone
-                    }
-                } as any);
+                        value: fullPhone,
+                    },
+                } as unknown as ChangeEvent<HTMLInputElement>;
+
+                reg.onChange(event);
             }
         }
     }, [phone.dialCode, value, name]);

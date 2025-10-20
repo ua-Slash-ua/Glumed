@@ -1,13 +1,11 @@
-import { RegisterOptions, UseFormRegister } from "react-hook-form";
-import {PhoneIsoCodes} from "@/types/phoneIsoCode.type";
+import {FieldValues, Path, RegisterOptions, UseFormRegister} from "react-hook-form";
 
-export type InputNameProps<T extends Record<string, any> = any> = {
+export type InputNameProps<TFieldValues extends FieldValues> = {
     className?: string;
-    name: string;
+    name: Path<TFieldValues>; // <- ключ типу форми
     placeholder?: string;
     value?: string;
-    registerOptions?: RegisterOptions<T>;
+    registerOptions?: RegisterOptions<TFieldValues>;
     error?: string;
-    registerAction ?: UseFormRegister<T>;
-    phoneCode?: PhoneIsoCodes;
+    registerAction?: UseFormRegister<TFieldValues>;
 };

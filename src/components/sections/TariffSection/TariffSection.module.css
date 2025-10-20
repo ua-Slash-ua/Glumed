@@ -1,6 +1,6 @@
 .tariff_section {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +17,7 @@
 .title h3 {
     color: var(--color-primary);
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 2.70833vw;
     font-style: normal;
     font-weight: 700;
@@ -88,7 +88,7 @@
 
 .sub_title h4 {
     color: #000;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.375vw;
     font-style: normal;
     font-weight: 700;
@@ -98,7 +98,7 @@
 .sales .title h3 {
     color: #FFF;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.66667vw;
     font-style: normal;
     font-weight: 700;
@@ -153,7 +153,7 @@
 .time_name {
     color: #FFF;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.5175vw;
     font-style: normal;
     font-weight: 400;
@@ -193,7 +193,7 @@
 .desc_item p {
     width: 12.55208vw;
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 500;

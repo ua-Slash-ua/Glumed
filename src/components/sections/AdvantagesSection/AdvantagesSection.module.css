@@ -22,7 +22,7 @@
 .title h3 {
     color: var(--color-primary);
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 2.70833vw;
     font-style: normal;
     font-weight: 700;
@@ -35,7 +35,7 @@
 .title p {
     color: #000;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.35417vw;
     font-style: normal;
     font-weight: 500;
@@ -91,9 +91,10 @@
     }
     .title{
         gap: 3.2vw;
+        align-items: center;
     }
     .title p{
-
+        width: 61.9vw;
         font-size: 4.26667vw;
 
     }

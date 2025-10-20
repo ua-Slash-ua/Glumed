@@ -31,7 +31,7 @@
 .content h5 {
     color: #000;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.14583vw;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +41,7 @@
 .content p {
     color: #000;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 500;

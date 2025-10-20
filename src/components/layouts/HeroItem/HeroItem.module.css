@@ -22,7 +22,7 @@
     border-radius: 0.52083vw;
     background: #FFF;
     box-shadow: 0 3.1vw 7.79vw 0 rgba(168, 188, 203, 0.16);
-    padding: 1.46vw 5.52vw 1.61vw 1.41vw;
+    padding: 1.46vw 1.41vw 1.61vw 1.41vw;
 }
 
 .content div {
@@ -32,11 +32,12 @@
 
 .content p {
     color: #000;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    white-space: pre-line;
 }
 
 .foreground {

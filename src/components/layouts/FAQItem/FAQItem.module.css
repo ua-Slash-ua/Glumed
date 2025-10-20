@@ -31,7 +31,7 @@
 .item h5 {
     width: 100%;
     color: #151515;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 2.29167vw;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +41,7 @@
 
 .item p {
     color: rgba(21, 21, 21, 0.60);
-    font-family: "Inter Tight", serif;
+    font-family: var(--font-inter-tight), sans-serif;
     font-size: 1.25vw;
     font-style: normal;
     font-weight: 500;
@@ -49,7 +49,7 @@
     max-width: 51%;
 }
 .item p strong{
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .activate {

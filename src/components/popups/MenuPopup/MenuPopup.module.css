@@ -30,7 +30,7 @@
 
 .head span {
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 9.30533vw;
     font-style: normal;
     font-weight: 800;
@@ -75,7 +75,7 @@
 
 .menuItem {
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 4.8vw;
     font-style: normal;
     font-weight: 500;
@@ -99,7 +99,7 @@
 }
 
 .btn_orders span {
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 3.73333vw;
     font-style: normal;
     font-weight: 800;
@@ -139,7 +139,7 @@
 }
 .con p{
     color: #FFF;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 3.73333vw;
     font-style: normal;
     font-weight: 600;

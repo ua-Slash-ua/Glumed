@@ -18,12 +18,50 @@ export default function ReviewSection() {
     const prevRef = useRef<HTMLDivElement>(null);
     const swiperRef = useRef<SwiperType | null>(null);
 
+    // Переміщуємо всі хуки для відео на рівень компонента
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+    const [isPlayingArray, setIsPlayingArray] = useState<boolean[]>(
+        Array(countReview).fill(false)
+    );
+
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    // Зупиняємо всі відео при зміні слайду
+    useEffect(() => {
+        videoRefs.current.forEach((video, index) => {
+            if (video && index !== activeSlide) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+        setIsPlayingArray(prev => prev.map((_, i) => i === activeSlide ? prev[i] : false));
+    }, [activeSlide]);
+
+    const togglePlay = (index: number) => {
+        const video = videoRefs.current[index];
+        if (!video) return;
+
+        if (video.paused) {
+            video.play();
+            setIsPlayingArray(prev => {
+                const copy = [...prev];
+                copy[index] = true;
+                return copy;
+            });
+        } else {
+            video.pause();
+            setIsPlayingArray(prev => {
+                const copy = [...prev];
+                copy[index] = false;
+                return copy;
+            });
+        }
+    };
 
     return (
         <section className={s.review_section} id={'reviews'}>
@@ -53,58 +91,50 @@ export default function ReviewSection() {
                     setActiveSlide(swiper.activeIndex);
                 }}
             >
-                {ReviewSectionConfig.items.map((item, index) => {
-                    const videoRef = useRef<HTMLVideoElement>(null);
-                    const [isPlaying, setIsPlaying] = useState(false);
-
-                    const togglePlay = () => {
-                        if (!videoRef.current) return;
-                        if (videoRef.current.paused) {
-                            videoRef.current.play();
-                            setIsPlaying(true);
-                        } else {
-                            videoRef.current.pause();
-                            setIsPlaying(false);
-                        }
-                    };
-
-                    return (
-                        <SwiperSlide key={index} className={s.swiper_slide}>
-                            {item.video ? (
-                                <>
-                                    <video
-                                        ref={videoRef}
-                                        src={item.video.src}
-                                        className={clsx(s.image, s.video)}
-                                        preload="metadata"  // або "auto", "none" за потребою
-                                        onCanPlay={() => console.log('Video ready', index)}
-                                        poster={item.image.src.src}
-                                    />
-                                    <button className={s.playBtn} onClick={togglePlay} style={{ background: 'transparent', border: 'none', padding: 0 }}>
-                                        {isPlaying ? (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                                <rect x="12" y="10" width="5" height="20" fill="white"/>
-                                                <rect x="23" y="10" width="5" height="20" fill="white"/>
-                                            </svg>
-                                        ) : (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                                <polygon points="15,10 30,20 15,30" fill="white"/>
-                                            </svg>
-                                        )}
-                                    </button>
-
-
-
-                                </>
-                            ) : (
-                                <IconComponent src={item.image.src} alt={item.image.alt} className={s.image}/>
-                            )}
-                            <span>{item.name}</span>
-                            <span>{item.age}</span>
-                            <p>{item.review}</p>
-                        </SwiperSlide>
-                    );
-                })}
+                {ReviewSectionConfig.items.map((item, index) => (
+                    <SwiperSlide key={index} className={s.swiper_slide}>
+                        {item.video ? (
+                            <>
+                                <video
+                                    ref={el => { videoRefs.current[index] = el; }}
+                                    src={item.video.src}
+                                    className={clsx(s.image, s.video)}
+                                    preload="metadata"
+                                    // poster={item.image.src.src}
+                                    playsInline
+                                    onEnded={() => {
+                                        setIsPlayingArray(prev => {
+                                            const copy = [...prev];
+                                            copy[index] = false;
+                                            return copy;
+                                        });
+                                    }}
+                                />
+                                <button
+                                    className={s.playBtn}
+                                    onClick={() => togglePlay(index)}
+                                    aria-label={isPlayingArray[index] ? "Pause video" : "Play video"}
+                                >
+                                    {isPlayingArray[index] ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <rect x="12" y="10" width="5" height="20" fill="white"/>
+                                            <rect x="23" y="10" width="5" height="20" fill="white"/>
+                                        </svg>
+                                    ) : (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <polygon points="15,10 30,20 15,30" fill="white"/>
+                                        </svg>
+                                    )}
+                                </button>
+                            </>
+                        ) : (
+                            <IconComponent src={item.image.src} alt={item.image.alt} className={s.image}/>
+                        )}
+                        <span>{item.name}</span>
+                        <span>{item.age}</span>
+                        <p>{item.review}</p>
+                    </SwiperSlide>
+                ))}
             </Swiper>
 
             {width > 1024 ? (
@@ -147,7 +177,7 @@ export default function ReviewSection() {
                         onClick={() => swiperRef.current?.slideNext()}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                              fill="none">
+                             fill="none">
                             <g clipPath="url(#clip0_0_425)">
                                 <path
                                     d="M9.9996 0.869629L8.38464 2.48459L14.7588 8.85875H0.869141V11.1414H14.7588L8.38464 17.5156L9.9996 19.1305L19.13 10.0001L9.9996 0.869629Z"

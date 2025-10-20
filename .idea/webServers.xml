@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ca2fa2f5-5025-404f-b4dc-b507d63bb0a1" name="Lead" url="http://jh583959.ftp.tools">
+        <fileTransfer host="jh583959.ftp.tools" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="6fca53cc-ed2c-429f-a70a-e4588edfc264" name="Lead_">
+        <fileTransfer rootFolder="/home/jh583959/glumed-forte.com.ua/www" accessType="SFTP" host="jh583959.ftp.tools" port="22" sshConfigId="a8ef3f5d-ec08-44c7-8a9d-8f81c72dd05c" sshConfig="Lead">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

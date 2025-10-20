@@ -26,7 +26,7 @@
 
 .content h1 {
     color: var(--color-primary);
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 3.4375vw;
     font-style: normal;
     font-weight: 700;
@@ -43,18 +43,19 @@
 .content p {
     width: 23.22917vw;
     color: #000;
-    font-family: Manrope, sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9375vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    position: relative;
+    z-index: 3;
 }
 
 .hero_bg {
     border-radius: 2.29167vw;
     position: absolute;
     overflow: hidden;
-    z-index: -1;
 }
 
 .hero_icon {
@@ -92,7 +93,7 @@
     /*display: none;*/
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1024px) {
     .div {
         height: 192vw;
         align-self: stretch;
@@ -139,23 +140,20 @@
     }
 
     .btn_order {
-        width: fit-content;
-        height: 13.86667vw;
-        padding: 4.8vw 6.4vw;
+        width: fit-content!important;
+        height: 13.86667vw !important;
+        padding: 4.8vw 6.4vw!important;
 
 
     }
 
     .btn_order span {
-        font-size: 3.73333vw;
-        font-style: normal;
-        font-weight: 800;
+        font-size: 3.73333vw!important;
+        font-style: normal!important;
+        font-weight: 600!important;
         line-height: normal;
     }
 
-    .btn_order span {
-        content: 'Безкоштовна консультація';
-    }
 
     .hero_icon_garant {
         width: 36.8vw;

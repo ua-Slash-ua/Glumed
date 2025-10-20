@@ -6,7 +6,7 @@ export const HeroSectionConfig = {
     cards: [
         {
             icon: IconsData.leaf,
-            title: 'Натуральний склад без “хімії”'
+            title: 'Натуральний\n склад  без “хімії”'
         },
         {
             icon: IconsData.arrows,
@@ -16,7 +16,7 @@ export const HeroSectionConfig = {
 
         {
             icon: IconsData.clock,
-            title: 'Рекомендовано для довгострокового прийому'
+            title: 'Рекомендовано для \nдовгострокового прийому'
         }
     ]
 }

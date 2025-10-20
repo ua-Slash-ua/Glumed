@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="jh583959.ftp.tools" id="a8ef3f5d-ec08-44c7-8a9d-8f81c72dd05c" port="22" customName="Lead" nameFormat="CUSTOM" username="jh583959" useOpenSSHConfig="true">
+        <option name="customName" value="Lead" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>
