@@ -7,3 +7,9 @@
 /*.background path{*/
 /*    fill: var(--color-primary);*/
 /*}*/
+
+@media screen and (max-width: 1024px) {
+    .background{
+        display: none;
+    }
+}

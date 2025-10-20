@@ -231,7 +231,7 @@
     }
 
     .image, .image img {
-        height: 100%;
+        height: 105%;
     }
 
     .title h3 {
@@ -244,8 +244,8 @@
     }
 
     .review_section {
-        margin: 16vw 4.27vw 33.6vw;
-        padding: 0;
+        padding: 16vw 4.27vw 33.6vw;
+        overflow: hidden;
     }
     .star{
         display: none;
@@ -256,5 +256,9 @@
         flex-shrink: 0;
         border-radius: 13.86667vw;
 
+    }
+
+    .playBtn svg{
+        width: 90%;
     }
 }

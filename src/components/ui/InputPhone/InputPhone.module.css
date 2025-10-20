@@ -1,6 +1,7 @@
 .container {
     margin-bottom: 1vw;
     z-index: 20;
+    width: 100%;
 }
 
 .select {
@@ -112,6 +113,13 @@
     .ul li {
         gap: 1vw;
         margin-left: 1vw;
+    }
+    .error{
+        display: flex;
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 2vw;
     }
 }
 

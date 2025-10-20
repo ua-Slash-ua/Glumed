@@ -280,11 +280,15 @@
 }
 .fullSales{
     background: #2CB43C;
+
 }
 
 .fullSales path{
     fill: #ffffff;
 
+}
+.fullSales p{
+    color: #FFFFFF!important;
 }
 @media screen and (max-width: 1024px) {
     .item{
@@ -309,16 +313,17 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        width: 50.52053vw;
+        width:63vw;
         margin-bottom: 4.27vw;
 
     }
     .item_text ul{
-        gap: 3.95vw;
+        gap: 1.87vw;
     }
     .item_text ul li{
         gap: 2vw;
     }
+
     .item_text ul li p{
         width: 60vw;
         font-size: 3.73333vw;
@@ -331,6 +336,7 @@
         width: 3.00133vw;
         height: 3.00133vw;
         flex-shrink: 0;
+        margin-top: 1vw;
     }
     .fire{
         width: 9.1872vw;
@@ -376,8 +382,11 @@
         width: 100%;
         height: 13.83893vw;
         border-radius: 10.97627vw;
-        margin-top: 10.63vw;
+        margin-top: 13.54vw;
 
+    }
+    .full .btn_order{
+        margin-top: 10.64vw!important;
     }
     .btn_order span{
         font-size: 3.73333vw;
@@ -430,4 +439,5 @@
         fill: #ffffff;
 
     }
+
 }

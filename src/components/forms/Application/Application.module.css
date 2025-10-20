@@ -171,7 +171,7 @@
 
     }
 
-    .div p {
+    .form .div p {
         width: 63.46667vw;
         font-size: 3.2vw;
         font-style: normal;
@@ -179,4 +179,7 @@
         line-height: normal;
     }
 
+    .msg_suc, .msg_err {
+        font-size: 3.2vw;
+    }
 }

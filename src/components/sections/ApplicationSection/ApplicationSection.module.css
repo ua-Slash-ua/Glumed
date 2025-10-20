@@ -130,6 +130,7 @@
     .application_section{
         flex-direction: column;
         z-index: 20;
+        margin-bottom: 18.4vw;
     }
     .aside , .form{
         width: 100%;

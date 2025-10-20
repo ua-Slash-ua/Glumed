@@ -1,4 +1,4 @@
-.item{
+.item {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -20,7 +20,8 @@
     border-radius: 2.65625vw;
     background: #FCFDFF;
 }
-.circle_middle{
+
+.circle_middle {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,7 +34,8 @@
     background: #FFF;
     box-shadow: 0 0.2176vw 1.1967vw 0 rgba(168, 188, 203, 0.33);
 }
-.circle_main{
+
+.circle_main {
     width: 0.48297vw;
     height: 0.48297vw;
     flex-shrink: 0;
@@ -43,7 +45,7 @@
 
 }
 
-.item p{
+.item p {
     color: #FFF;
     font-family: var(--font-manrope), sans-serif;
     font-size: 1.04167vw;
@@ -51,47 +53,58 @@
     font-weight: 700;
     line-height: normal;
 }
-.right{
+
+.right {
     justify-content: flex-end;
 }
 
-.right .circle_main{
+.right .circle_main {
     border-radius: 0.48297rem;
     background: var(--background--primary-gradient);
     box-shadow: 0 0.2176vw 0.4351vw 0 rgba(68, 65, 244, 0.33);
 
 }
 
+
 @media screen and (max-width: 1024px) {
-    .item{
+    .item {
         gap: 3.2vw;
         align-items: flex-start;
         justify-content: flex-start;
     }
-    .circle_container{
+
+    .circle_container {
         width: 6.4vw;
         height: 6.4vw;
         flex-shrink: 0;
         aspect-ratio: 1/1;
         border-radius: 6.4vw;
     }
-    .circle_middle{
+
+    .circle_middle {
         width: 3.10293vw;
         height: 3.10293vw;
         flex-shrink: 0;
         border-radius: 6.4vw;
     }
-    .circle_main{
+
+    .circle_main {
         width: 1.16373vw;
         height: 1.16373vw;
         flex-shrink: 0;
         border-radius: 6.4vw;
     }
-    .item p{
+
+    .item p {
         font-size: 3.73333vw;
         font-style: normal;
         font-weight: 600;
 
         width: 47.2vw;
+    }
+
+
+    .mobile .circle_main {
+        background: var(--background--primary-gradient);
     }
 }

@@ -16,7 +16,7 @@ export default function AdvantageItem({isMain,items,image,icon,title,className, 
                     {
                         items.map((item, index) => {
                             return (
-                                <AdvantageLineItem key={index} text={item} status={!isMain}/>
+                                <AdvantageLineItem key={index} text={item} status={!isMain} isMobile={isMobile}/>
                             )
                         })
                     }

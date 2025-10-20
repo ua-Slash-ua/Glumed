@@ -50,7 +50,7 @@
 
 .foreground {
     position: absolute;
-    top: 0.73vw;
+    bottom: -0.73vw;
     left: 1.41vw;
     width: 16.66667vw;
     height: 17.2vw;
@@ -105,7 +105,8 @@
     .container {
         width: 100%;
         /*width: 91.46667vw;*/
-        height: 58.66667vw;
+        /*min-height: 58.66667vw;*/
+        height: fit-content;
         flex-shrink: 0;
 
     }
@@ -114,6 +115,7 @@
         border-radius: 2.66667vw;
         gap: 7.12vw;
         padding-top: 12.96vw;
+        padding-bottom: 7.12vw;
     }
 
     .content p {
@@ -160,11 +162,11 @@
 
     .foreground {
         width: 81.33333vw;
-        height: 43.2vw;
+        height: 20vw;
         flex-shrink: 0;
         border-radius: 2.5408vw;
-        top: 19vw;
         left: 5vw;
+        bottom: -3.3vw;
     }
 
 }

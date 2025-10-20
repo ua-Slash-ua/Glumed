@@ -127,14 +127,15 @@ export default function InputPhone({
                         )
                     }
                 </div>
-            </div>
-            {
-                error && (
-                    <span className={s.error}>
+                {
+                    error && (
+                        <span className={s.error}>
                            {error}
                        </span>
-                )
-            }
+                    )
+                }
+            </div>
+
         </>
     )
 }

@@ -223,7 +223,9 @@
     .tariff_section {
         padding: 0 4.27vw;
     }
-
+    .title{
+        width: 100%;
+    }
     .title h3 {
         width: 87.73333vw;
         font-size: 7.46667vw;
@@ -263,9 +265,16 @@
 
     }
 
-    .title {
+    .sales .title{
         width: 100%;
         margin-bottom: 5.87vw;
+
+    }
+    .sales .title  h3{
+        font-size: 3.73333vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 99%; /* 3.696rem */
     }
 
 

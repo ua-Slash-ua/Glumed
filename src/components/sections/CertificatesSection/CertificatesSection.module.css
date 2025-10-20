@@ -118,14 +118,17 @@
     overflow: hidden;
 }
 .certificates .certificate_image:first-child img {
-    max-width: 106%;
+    transform-origin: top right; /* точка, від якої масштабування */
+    transform: scale(1.06);      /* збільшення на 6% */
+    display: block;               /* прибирає можливі пробіли під img */
 }
+
 
 
 @media screen and (max-width: 1024px) {
     .certificates_section {
         flex-direction: column;
-
+        margin-bottom: 17.87vw;
     }
 
     .aside {

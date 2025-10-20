@@ -1,9 +1,10 @@
 import s from './AdvantageLineItem.module.css'
 
-export default function AdvantageLineItem({status = false, text}: { status?: boolean, text: string }) {
+export default function AdvantageLineItem({status = false, text, isMobile}: { status?: boolean, text: string
+    isMobile?: boolean, }) {
     return (
         <>
-            <li className={`${s.item} ${status? s.right :''}`}>
+            <li className={`${s.item} ${status? s.right :''} ${isMobile? s.mobile:''}`}>
                 {!status &&(
                     <div className={s.circle_container}>
                         <div className={s.circle_middle}>
