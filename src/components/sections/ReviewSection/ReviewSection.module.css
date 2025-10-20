@@ -3,6 +3,7 @@
     padding: 0 0 0 2vw;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .title {
