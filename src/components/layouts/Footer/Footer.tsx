@@ -88,14 +88,14 @@ export default function Footer() {
                 </div>
                 <aside className={s.aside_mob}>
                     <ul className={s.pages_mob}>
-                        {mainConfig.pages.map((page, index) => {
-                            return (
-                                <li key={index}>
-                                    <a href={page.href}>{page.name}</a>
+                        {/*{mainConfig.pages.map((page, index) => {*/}
+                        {/*    return (*/}
+                        {/*        <li key={index}>*/}
+                        {/*            <a href={page.href}>{page.name}</a>*/}
 
-                                </li>
-                            )
-                        })}
+                        {/*        </li>*/}
+                        {/*    )*/}
+                        {/*})}*/}
                     </ul>
                     <p>{mainConfig.subtitle} </p>
                 </aside>

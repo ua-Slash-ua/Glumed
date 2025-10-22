@@ -7,21 +7,38 @@ import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import clsx from "clsx";
 import {useEffect, useState} from "react";
 import StarIcon from "@/components/icons/StarIcon/StarIcon";
-const DEADLINE = new Date("2025-10-15T00:00:00"); // приклад дати завершення
+
+const START_MINUTES = 6; // Таймер стартує з 6 хвилин
+
 export default function TariffSection() {
     const {src: tablet02Src, alt: tablet02Alt} = IconsData.tablets_02;
     const {src: blurBgSrc, alt: blurBgAlt} = IconsData.blur_bg;
 
-    const [time, setTime] = useState<number[] >([0,0,0,0,0,0]);
+    const [time, setTime] = useState<number[]>([0,0,0,0,0,0]); // [min1, min2, sec1, sec2, hundred1, hundred2]
 
     useEffect(() => {
-        const update = () => setTime(getTimeRemaining(DEADLINE));
-        update(); // одразу ініціалізуємо
-        const timer = setInterval(update, 1000);
+        const endTime = new Date().getTime() + START_MINUTES * 60 * 1000;
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const totalMs = Math.max(0, endTime - now);
+
+            const totalSeconds = Math.floor(totalMs / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            const hundredths = Math.floor((totalMs % 1000) / 10);
+
+            setTime([
+                Math.floor(minutes / 10), minutes % 10,
+                Math.floor(seconds / 10), seconds % 10,
+                Math.floor(hundredths / 10), hundredths % 10
+            ]);
+        }, 10); // оновлення кожні 10 мс для сотих
+
         return () => clearInterval(timer);
     }, []);
 
-    return (<>
+    return (
         <section className={s.tariff_section} id={'tariffs'}>
             <div className={s.title}>
                 <h3>
@@ -29,45 +46,48 @@ export default function TariffSection() {
                     <StarIcon className={s.star}/>
                 </h3>
             </div>
+
             <div className={s.container}>
-
-                {
-
-                    TariffSectionConfig.tariffs.map((item, index) => (
-                        <TariffItem key={index} {...item}/>
-                    ))
-                }
+                {TariffSectionConfig.tariffs.map((item, index) => (
+                    <TariffItem key={index} {...item}/>
+                ))}
             </div>
+
             <div className={s.sales}>
                 <div className={s.sub_title}>
                     <h4>Сьогодні Glumed обрали вже 27 людей</h4>
                 </div>
+
                 <div className={s.title}>
                     <h3>Акційна ціна від виробника діє ще:</h3>
                 </div>
+
                 <div className={s.time_container}>
                     <div className={s.time_item}>
                         <div className={s.time_value}>
                             <span>{time[0]}</span>
                             <span>{time[1]}</span>
                         </div>
-                        <div className={s.time_name}>годин</div>
+                        <div className={s.time_name}>Хвилин </div>
                     </div>
+
                     <div className={s.time_item}>
                         <div className={s.time_value}>
                             <span>{time[2]}</span>
                             <span>{time[3]}</span>
                         </div>
-                        <div className={s.time_name}>хвилин</div>
+                        <div className={s.time_name}>Секунд</div>
                     </div>
+
                     <div className={s.time_item}>
                         <div className={s.time_value}>
                             <span>{time[4]}</span>
                             <span>{time[5]}</span>
                         </div>
-                        <div className={s.time_name}>секунд</div>
+                        <div className={s.time_name}>Соті</div>
                     </div>
                 </div>
+
                 <div className={s.description}>
                     <div className={s.desc_item}>
                         <div className={s.desc_icon}>
@@ -77,16 +97,13 @@ export default function TariffSection() {
                                 <rect x="218" y="564" width="186" height="534" transform="rotate(-90 218 564)" fill="#6E6E6E"/>
                                 <rect x="189" y="204" width="186" height="534" rx="5" fill="#6E6E6E"/>
                             </svg>
-
                         </div>
-                        <p>
-                            Доставка Новою поштою
-                        </p>
+                        <p>Доставка Новою поштою</p>
                     </div>
+
                     <div className={s.desc_item}>
                         <div className={s.desc_icon}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 30 34"
-                                 fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="34" viewBox="0 0 30 34" fill="none">
                                 <path fillRule="evenodd" clipRule="evenodd"
                                       d="M30 27.6745H22.6908C20.3538 27.6745 18.46 25.7278 18.46 23.3257V20.163C18.46 17.7609 20.3538 15.8142 22.6908 15.8142H30V13.8375C30 12.6847 29.5538 11.5777 28.7615 10.7617C27.9677 9.94733 26.8908 9.48873 25.7692 9.48873C20.4415 9.48873 9.55846 9.48873 4.23077 9.48873C3.10923 9.48873 2.03231 9.94733 1.23846 10.7617C0.446154 11.5777 0 12.6847 0 13.8375V29.6512C0 30.804 0.446154 31.911 1.23846 32.727C2.03231 33.5414 3.10923 34 4.23077 34H25.7692C26.8908 34 27.9677 33.5414 28.7615 32.727C29.5538 31.911 30 30.804 30 29.6512V27.6745ZM30 18.1863V25.3025H22.6908C21.6292 25.3025 20.7677 24.4169 20.7677 23.3257V20.163C20.7677 19.0718 21.6292 18.1863 22.6908 18.1863H30ZM23.4615 20.163C24.3108 20.163 25 20.8715 25 21.7444C25 22.6173 24.3108 23.3257 23.4615 23.3257C22.6123 23.3257 21.9231 22.6173 21.9231 21.7444C21.9231 20.8715 22.6123 20.163 23.4615 20.163Z"
                                       fill="white"/>
@@ -98,34 +115,15 @@ export default function TariffSection() {
                                       fill="white"/>
                             </svg>
                         </div>
-                        <p>
-                            Оплата при отриманні
-                        </p>
+                        <p>Оплата при отриманні</p>
                     </div>
                 </div>
+
                 <IconComponent key={1} src={tablet02Src} alt={tablet02Alt} className={clsx(s.sales_icon, s.first)}/>
                 <IconComponent key={2} src={tablet02Src} alt={tablet02Alt} className={clsx(s.sales_icon, s.second)}/>
             </div>
+
             <IconComponent src={blurBgSrc} alt={blurBgAlt} className={s.blur}/>
         </section>
-
-
-    </>)
+    )
 }
-
-
-function getTimeRemaining(endTime: Date): number[] {
-    const total = endTime.getTime() - new Date().getTime();
-
-    const totalSeconds = Math.max(0, Math.floor(total / 1000));
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    return [
-        Math.floor(hours / 10), hours % 10,
-        Math.floor(minutes / 10), minutes % 10,
-        Math.floor(seconds / 10), seconds % 10,
-    ];
-}
-

@@ -5,6 +5,8 @@ import InputName from "@/components/ui/InputName/InputName"
 import InputPhone from "@/components/ui/InputPhone/InputPhone"
 import clsx from "clsx"
 import { useState } from "react"
+import {useRouter} from "next/navigation";
+import path from "path";
 
 export type ApplicationForm = {
     name: string
@@ -13,11 +15,11 @@ export type ApplicationForm = {
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
-export default function Application() {
+export default function Application({text}:{text?: string}) {
     const { register, handleSubmit, formState, reset } = useForm<ApplicationForm>()
     const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle')
     const [errorMessage, setErrorMessage] = useState<string>('')
-
+    const router = useRouter();
     const nameError = formState.errors['name']?.message
     const phoneError = formState.errors['phone']?.message
 
@@ -58,7 +60,7 @@ export default function Application() {
                 console.log('KeyCRM response:', result)
                 setSubmitStatus('success')
                 reset({ name: '', phone: '' })
-
+                router.push('/thank-you')
                 // Автоматично ховаємо повідомлення через 5 секунд
                 setTimeout(() => {
                     setSubmitStatus('idle')
@@ -86,7 +88,7 @@ export default function Application() {
     return (
         <form onSubmit={handleSubmit(onSubmit, onError)} className={s.form}>
             <div className={s.div}>
-                <h3>Ви можете залишити контакти та оформити заявку на товар</h3>
+                <h3>{text?? 'Ви можете залишити контакти та оформити заявку на товар'}</h3>
             </div>
 
             <InputName
@@ -126,11 +128,6 @@ export default function Application() {
 
             </button>
 
-            {submitStatus === 'success' && (
-                <p className={clsx(s.msg_suc)}>
-                    Повідомлення успішно відправлено!
-                </p>
-            )}
 
             {submitStatus === 'error' && (
                 <p className={clsx(s.msg_err)}>

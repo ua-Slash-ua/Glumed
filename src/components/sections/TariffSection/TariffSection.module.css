@@ -218,6 +218,12 @@
     filter: blur(0.781vw);
     top: 0;
 }
+.time_item {
+    display: flex;
+    flex-direction: column;
+    gap: .67vw;
+}
+
 
 @media screen and (max-width: 1024px) {
     .tariff_section {

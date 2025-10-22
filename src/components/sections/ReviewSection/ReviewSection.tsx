@@ -137,69 +137,66 @@ export default function ReviewSection() {
                 ))}
             </Swiper>
 
-            {width > 1024 ? (
-                <div className={s.navigation}>
-                    <div
-                        className={`${s.btn_prev} ${activeSlide <= 0 ? s.disabled_btn : ''}`}
-                        ref={prevRef}
-                        onClick={() => swiperRef.current?.slidePrev()}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                             fill="none">
-                            <g clipPath="url(#clip0_0_419)">
-                                <path
-                                    d="M10.0004 0.869629L11.6154 2.48459L5.24115 8.85875H19.1309V11.1414H5.24115L11.6154 17.5156L10.0004 19.1305L0.869989 10.0001L10.0004 0.869629Z"
-                                    fill="white"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_0_419">
-                                    <rect width="18.2609" height="18.2609" fill="white"
-                                          transform="matrix(-1 0 0 1 19.1309 0.869629)"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-
-                    <ul className={s.nav}>
-                        {ReviewSectionConfig.items.map((item, index) => (
-                            <li
-                                key={index}
-                                className={`${index <= activeSlide + 3 ? s.active_li : s.li}`}
-                                onClick={() => index > 2 && swiperRef.current?.slideTo(index - 3)}
-                                style={{cursor: index > 2 ? 'pointer' : 'default'}}
-                            />
-                        ))}
-                    </ul>
-
-                    <div
-                        className={`${s.btn_next} ${activeSlide >= countReview - 4 ? s.disabled_btn : ''}`}
-                        ref={nextRef}
-                        onClick={() => swiperRef.current?.slideNext()}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                             fill="none">
-                            <g clipPath="url(#clip0_0_425)">
-                                <path
-                                    d="M9.9996 0.869629L8.38464 2.48459L14.7588 8.85875H0.869141V11.1414H14.7588L8.38464 17.5156L9.9996 19.1305L19.13 10.0001L9.9996 0.869629Z"
-                                    fill="white"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_0_425">
-                                    <rect width="18.2609" height="18.2609" fill="white"
-                                          transform="translate(0.869141 0.869629)"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
+            {width <= 1024 && (<div className={s.nav_mobile}>
+                <div
+                    className={s.back_mobile}
+                    style={{width: `${(activeSlide + 1) / countReview * 100}%`}}
+                />
+            </div>)}
+            <div className={s.navigation}>
+                <div
+                    className={`${s.btn_prev} ${activeSlide <= 0 ? s.disabled_btn : ''}`}
+                    ref={prevRef}
+                    onClick={() => swiperRef.current?.slidePrev()}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                         fill="none">
+                        <g clipPath="url(#clip0_0_419)">
+                            <path
+                                d="M10.0004 0.869629L11.6154 2.48459L5.24115 8.85875H19.1309V11.1414H5.24115L11.6154 17.5156L10.0004 19.1305L0.869989 10.0001L10.0004 0.869629Z"
+                                fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_0_419">
+                                <rect width="18.2609" height="18.2609" fill="white"
+                                      transform="matrix(-1 0 0 1 19.1309 0.869629)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
-            ) : (
-                <div className={s.nav_mobile}>
-                    <div
-                        className={s.back_mobile}
-                        style={{width: `${(activeSlide + 1) / countReview * 100}%`}}
-                    />
+
+                <ul className={s.nav}>
+                    {ReviewSectionConfig.items.map((item, index) => (
+                        <li
+                            key={index}
+                            className={`${index <= activeSlide + 3 + (width <=1024 ? -3 : 0) ? s.active_li : s.li}`}
+                            onClick={() => index > 2 && swiperRef.current?.slideTo(index - 3 + (width <=1024 ? 3 : 0))}
+                            style={{cursor: index > 2 ? 'pointer' : 'default'}}
+                        />
+                    ))}
+                </ul>
+
+                <div
+                    className={`${s.btn_next} ${activeSlide >= countReview - 4 + (width <=1024 ? +3 : 0) ? s.disabled_btn : ''}`}
+                    ref={nextRef}
+                    onClick={() => swiperRef.current?.slideNext()}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                         fill="none">
+                        <g clipPath="url(#clip0_0_425)">
+                            <path
+                                d="M9.9996 0.869629L8.38464 2.48459L14.7588 8.85875H0.869141V11.1414H14.7588L8.38464 17.5156L9.9996 19.1305L19.13 10.0001L9.9996 0.869629Z"
+                                fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_0_425">
+                                <rect width="18.2609" height="18.2609" fill="white"
+                                      transform="translate(0.869141 0.869629)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
-            )}
+            </div>
         </section>
     );
 }

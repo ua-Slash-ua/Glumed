@@ -1,8 +1,11 @@
+'use client'
 import s from './TariffItem.module.css'
 import {TariffType} from "@/types/props/tariffsProps";
 import BtnOrder from "@/components/ui/BtnOrder/BtnOrder";
 import IconComponent from "@/components/icons/IconComponent/IconComponent";
 import {IconsData} from "@/config/data/icons";
+import ApplicationPopup from "@/components/popups/ApplicationPopup/ApplicationPopup";
+import {useState} from "react";
 
 export default function TariffItem({
                                        items,
@@ -16,6 +19,7 @@ export default function TariffItem({
                                        title,
                                        subprice
                                    }: TariffType) {
+    const [active, setActive] = useState(false);
     const {src: garantSrc, alt: garantAlt} = IconsData.garant;
     return (
         <>
@@ -76,8 +80,15 @@ export default function TariffItem({
                             </div>
                             <IconComponent src={icon.src} alt={icon.alt} className={s.image}/>
                         </div>
-                        <BtnOrder textContent={btn_order} className={s.btn_order}
-                                  content={salesItem({text: btn_order_sale, type})}/>
+                        <BtnOrder textContent={btn_order}
+                                  className={s.btn_order}
+                                  content={salesItem({text: btn_order_sale, type})}
+                                  popUp={true}
+                                  onClick={() => {
+                                      setActive(true)
+                                  }}
+
+                        />
                     </div>
 
 
@@ -88,6 +99,9 @@ export default function TariffItem({
                     <IconComponent src={garantSrc} alt={garantAlt} className={s.garant}/>
                 ) : ''
             }
+            <ApplicationPopup active={active} onClose={() => {
+                setActive(false)
+            }}/>
         </>
     )
 }
@@ -109,6 +123,6 @@ function salesItem({text, type}: { text: string, type: 'base' | 'full' }) {
                         fill="#FFF1F1"/>
                 </svg>
             </div>
-        </>
-    )
+
+        </>)
 }

@@ -6,4 +6,5 @@ export const videos = {
         4: { src: '/reviews/video/4.mp4' },
         5: { src: '/reviews/video/5.mp4' },
     },
+    about:'/about.mp4'
 };

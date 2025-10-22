@@ -1,26 +1,26 @@
 export const MenuConfig = [
     {
         name: "Переваги",
-        path: "#advantages"
+        path: "/#advantages"
     },
     {
         name: "Чому Glumed",
-        path: "#whyglumed"
+        path: "/#whyglumed"
     },
     {
         name: "Відгуки",
-        path: "#reviews"
+        path: "/#reviews"
     },
     {
         name: "Ціни та акції",
-        path: "#tariffs"
+        path: "/#tariffs"
     },
     {
         name: "Сертифікати",
-        path: "#certificates"
+        path: "/#certificates"
     },
     {
         name: "FAQ",
-        path: "#faq"
+        path: "/#faq"
     },
 ]

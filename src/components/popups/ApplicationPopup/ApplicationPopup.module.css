@@ -1,0 +1,66 @@
+.background{
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn_close{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    right:  -2.5vw;
+    top: -3.5vw;
+    border-radius: 5vw;
+    background: rgba(255, 255, 255, 0.66);
+    cursor: pointer;
+
+}
+
+.btn_close svg{
+    width: 2vw;
+    height: 2vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 91.73333vw;
+    }
+
+    .btn_close{
+        width: 11vw;
+        height: 11vw;
+        right:  -1vw;
+        top: -15vw;
+        border-radius: 15vw;
+        background: rgba(255, 255, 255, 0.84);
+
+
+    }
+
+    .btn_close svg{
+        width: 7vw;
+        height: 7vw;
+    }
+    .content h3{
+        width: 100%;
+    }
+
+}

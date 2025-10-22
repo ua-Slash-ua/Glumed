@@ -3,13 +3,14 @@ import {MenuConfig} from "@/config/menu.config";
 import MenuItem from "@/components/layouts/Header/MenuItem/MenuItem";
 import BtnOrder from "@/components/ui/BtnOrder/BtnOrder";
 import BurgerBtn from "@/components/ui/BurgerBtn/BurgerBtn";
+import Link from "next/link";
 
 export default function Header() {
     return (
         <>
             <header className={s.header}>
                 <div className={s.r_side}>
-                    <span>GLUMED</span>
+                    <Link href={'/'}>GLUMED</Link>
                 </div>
                 <div className={s.l_side}>
                     <nav>

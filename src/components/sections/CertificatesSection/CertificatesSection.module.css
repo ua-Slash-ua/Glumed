@@ -36,8 +36,9 @@
     flex-shrink: 0;
     border-radius: 1.5625vw;
     overflow: hidden;
+    position: relative;
 }
-.preview img{
+.preview video{
     width: 100%;
 }
 
@@ -127,7 +128,28 @@
 }
 
 
+.playBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+    position: absolute;
+    top: 7%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+    border-radius: 3.75vw;
+    background: linear-gradient(265deg, #3D93F7 -1.54%, #4169F4 100%) !important;
+    width: 3.75vw;
+    height: 3.75vw;
+    flex-shrink: 0;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+}
+.playBtn svg{
+    width: 60%;
+}
 @media screen and (max-width: 1024px) {
     .certificates_section {
         flex-direction: column;
@@ -160,8 +182,21 @@
         overflow: hidden;
         margin-bottom: 16vw;
     }
-    .preview img{
+    .playBtn{
+        width: 13.86667vw;
+        height: 13.86667vw;
+        flex-shrink: 0;
+        border-radius: 13.86667vw;
+
+    }
+
+    .playBtn svg{
+        width: 90%;
+    }
+
+    .preview video{
         width: 100%;
+        border-radius: 5vw;
     }
     .main {
         width: 100%;

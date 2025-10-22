@@ -262,4 +262,29 @@
     .playBtn svg{
         width: 90%;
     }
+
+    .btn_prev , .btn_next{
+        width: 13.86667vw;
+        height: 13.86667vw;
+        flex-shrink: 0;
+        border-radius: 13.86667vw;
+    }
+
+    .btn_prev svg, .btn_next svg{
+        width: 5vw;
+        height: 5vw;
+        flex-shrink: 0;
+        border-radius: 13.86667vw;
+    }
+
+    .nav{
+        gap: 7vw;
+    }
+    .nav li{
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+    .navigation{
+        gap: 7vw;
+    }
 }

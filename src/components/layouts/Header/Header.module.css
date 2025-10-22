@@ -5,6 +5,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
+    position: relative;
 }
 .l_side{
     display: flex;
@@ -23,7 +25,7 @@
     flex-direction: row;
     gap: 1.72vw;
 }
-.r_side span{
+.r_side a{
     color: var(--color-primary);
     font-family: var(--font-manrope) , sans-serif;
     font-size: 1.96031vw;
@@ -31,6 +33,7 @@
     font-weight: 800;
     line-height: 111%; /* 2.17594rem */
     letter-spacing: -0.03922vw;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
@@ -42,7 +45,7 @@
         padding: 4.26667vw 4.27vw 0.06693vw 4.27vw;
 
     }
-    .r_side span{
+    .r_side a{
         font-size: 10.0368vw;
         font-style: normal;
         font-weight: 800;
