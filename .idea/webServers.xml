@@ -10,7 +10,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="6fca53cc-ed2c-429f-a70a-e4588edfc264" name="Lead_">
-        <fileTransfer rootFolder="/home/jh583959/glumed-forte.com.ua/www" accessType="SFTP" host="jh583959.ftp.tools" port="22" sshConfigId="a8ef3f5d-ec08-44c7-8a9d-8f81c72dd05c" sshConfig="Lead">
+        <fileTransfer rootFolder="/home/jh583959/" accessType="SFTP" host="jh583959.ftp.tools" port="22" sshConfigId="a8ef3f5d-ec08-44c7-8a9d-8f81c72dd05c" sshConfig="Lead">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

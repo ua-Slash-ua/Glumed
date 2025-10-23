@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     width: 25.05208vw;
     height: 3.64583vw;
     padding: 0 1.72vw 0;
@@ -58,6 +59,9 @@
     gap: 0.7vw;
     margin-left: 0.5vw;
 }
+.ul li span {
+    font-family: NeverMind, sans-serif;
+}
 
 .input_container input {
     padding-left: 1vw;
@@ -70,13 +74,27 @@
     line-height: 100%; /* 0.83333rem */
 }
 
-.select span {
+.input_container span:nth-child(2) {
+    font-size: 1vw;
+}
+.input_container input[type=number]::-webkit-outer-spin-button,
+.input_container input[type=number]::-webkit-inner-spin-button,
+.input_container input[type=number]{
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+
+}
+.select span, .input_container span{
     color: #222;
     font-family: NeverMind, sans-serif;
     font-size: 0.83333vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 0.83333rem */
+}
+.input_container span{
+    margin-right: 0.5vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -120,6 +138,9 @@
         font-style: normal;
         font-weight: 400;
         margin-top: 2vw;
+    }
+    .input_container span{
+        font-size: 3.73333vw !important;
     }
 }
 

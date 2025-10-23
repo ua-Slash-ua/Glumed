@@ -1,3 +1,4 @@
+'use client'
 import s from './Footer.module.css'
 import {mainConfig} from "@/config/main.config";
 import {MenuConfig} from "@/config/menu.config";
@@ -5,6 +6,12 @@ import BtnOrder from "@/components/ui/BtnOrder/BtnOrder";
 import Link from "next/link";
 
 export default function Footer() {
+
+    function handleClick() {
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact');
+        }
+    }
     return (
         <>
             <footer className={s.footer}>
@@ -53,26 +60,31 @@ export default function Footer() {
                                 return (
                                     <li key={index}>
                                         {contact.type === 'phone' && (
-                                            <a href={`tel:${contact.text}`}>
-                                                <div className={s.icon} dangerouslySetInnerHTML={{ __html: contact.icon }} />
+                                            <a href={`tel:${contact.text}`} >
+                                                <div className={s.icon}
+                                                     dangerouslySetInnerHTML={{__html: contact.icon}}/>
                                                 <p>{contact.text}</p>
                                             </a>
                                         )}
 
                                         {contact.type === 'email' && (
-                                            <a href={`mailto:${contact.text}`}>
-                                                <div className={s.icon} dangerouslySetInnerHTML={{ __html: contact.icon }} />
+                                            <a href={`mailto:${contact.text}`} onClick={handleClick}>
+                                                <div className={s.icon}
+                                                     dangerouslySetInnerHTML={{__html: contact.icon}}/>
                                                 <p>{contact.text}</p>
                                             </a>
                                         )}
 
                                         {contact.type === 'map' && (
                                             <a className={s.last}
-                                                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(contact.text)}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(contact.text)}`}
+                                               target="_blank"
+                                               rel="noopener noreferrer"
+                                               onClick={handleClick}
+
                                             >
-                                                <div className={s.icon} dangerouslySetInnerHTML={{ __html: contact.icon }} />
+                                                <div className={s.icon}
+                                                     dangerouslySetInnerHTML={{__html: contact.icon}}/>
                                                 <p>{contact.text}</p>
                                             </a>
                                         )}

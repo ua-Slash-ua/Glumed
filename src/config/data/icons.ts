@@ -40,6 +40,8 @@ import Sergey from "@/public/reviews/Sergey.png"
 import certificate01 from "@/public/certificates/certificate_01.png";
 import certificate02 from "@/public/certificates/certificate_02.png";
 
+import poster from "@/public/poster.png";
+
 
 export const IconsData: iconType = {
     hero_bg: {
@@ -157,7 +159,12 @@ export const IconsData: iconType = {
     blur_bg:{
         src:blurBg,
         alt:'Blur background',
+    },
+    poster:{
+        src:poster,
+        alt:'poster'
     }
+
 
 
 }

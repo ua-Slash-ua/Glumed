@@ -9,6 +9,7 @@ export const CertificatesSectionConfig = {
         'Пройшов усі необхідні перевірки',
     ],
     preview: IconsData.sergey,
+    poster: IconsData.poster,
     certificates:[
         IconsData.certificate_01,
         IconsData.certificate_02,

@@ -99,8 +99,8 @@ export default function ReviewSection() {
                                     ref={el => { videoRefs.current[index] = el; }}
                                     src={item.video.src}
                                     className={clsx(s.image, s.video)}
-                                    preload="metadata"
-                                    // poster={item.image.src.src}
+                                    preload="none"
+                                    poster={item.preview.src}
                                     playsInline
                                     onEnded={() => {
                                         setIsPlayingArray(prev => {

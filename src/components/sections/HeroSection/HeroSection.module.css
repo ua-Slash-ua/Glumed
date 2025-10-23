@@ -129,6 +129,7 @@
         font-weight: 500;
         line-height: normal;
         width: 77.33333vw;
+        z-index: 1;
     }
 
     .hero_icon {
@@ -169,7 +170,7 @@
         align-items: center;
         bottom: 8vw;
         position: relative;
-        z-index: 3;
+        z-index: 1;
     }
 
     .hero_section {

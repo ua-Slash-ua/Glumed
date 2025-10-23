@@ -6,7 +6,6 @@ import InputPhone from "@/components/ui/InputPhone/InputPhone"
 import clsx from "clsx"
 import { useState } from "react"
 import {useRouter} from "next/navigation";
-import path from "path";
 
 export type ApplicationForm = {
     name: string
@@ -27,7 +26,7 @@ export default function Application({text}:{text?: string}) {
         if (!data.phone.startsWith('+')) {
             data.phone = `+380${data.phone}`
         }
-
+        console.log('data.phone = ', data.phone)
         setSubmitStatus('loading')
         setErrorMessage('')
 
@@ -57,7 +56,11 @@ export default function Application({text}:{text?: string}) {
             const result = await res.json()
 
             if (res.ok) {
-                console.log('KeyCRM response:', result)
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead');
+                }
+
+                // console.log('KeyCRM response:', result)
                 setSubmitStatus('success')
                 reset({ name: '', phone: '' })
                 router.push('/thank-you')
@@ -121,6 +124,7 @@ export default function Application({text}:{text?: string}) {
             <button
                 className={s.btn_send}
                 disabled={submitStatus === 'loading'}
+
             >
                 <span>
                   {submitStatus === 'loading' ? 'ВІДПРАВКА...' : 'ЗАЛИШИТИ ЗАЯВКУ'}

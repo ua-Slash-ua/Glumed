@@ -49,6 +49,7 @@ export default function CertificatesSection() {
                         className={clsx(s.image, s.video)}
                         preload="metadata"
                         playsInline
+                        poster={CertificatesSectionConfig.poster.src.src}
                     />
                     <button
                         className={s.playBtn}
